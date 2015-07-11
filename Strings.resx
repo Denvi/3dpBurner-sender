@@ -117,15 +117,104 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="richTextBox1.Text" xml:space="preserve">
-    <value>3dpBurner-Sender is a free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+  <data name="buttonTextPortClose" xml:space="preserve">
+    <value>Close
+</value>
+  </data>
+  <data name="buttonTextPortOpen" xml:space="preserve">
+    <value>Open
+</value>
+  </data>
+  <data name="logError" xml:space="preserve">
+    <value>[Error]: {0}. </value>
+  </data>
+  <data name="threadException" xml:space="preserve">
+    <value>Thread exception</value>
+  </data>
+  <data name="applicationException" xml:space="preserve">
+    <value>Application exception</value>
+  </data>
+  <data name="labelTextFileProgress" xml:space="preserve">
+    <value>{0}% ({1}/{2} lines)</value>
+  </data>
+  <data name="statusIdle" xml:space="preserve">
+    <value>Idle</value>
+  </data>
+  <data name="statusAlarm" xml:space="preserve">
+    <value>Alarm</value>
+  </data>
+  <data name="statusHold" xml:space="preserve">
+    <value>Hold</value>
+  </data>
+  <data name="statusRun" xml:space="preserve">
+    <value>Run</value>
+  </data>
+  <data name="statusQueue" xml:space="preserve">
+    <value>Queue</value>
+  </data>
+  <data name="statusHome" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="logFileDone" xml:space="preserve">
+    <value>[File done @{0}]
+</value>
+  </data>
+  <data name="msgBoxMessageFileDone" xml:space="preserve">
+    <value>Yeah!. Burning Done!
 
-3dpBurner-Sender is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License along with 3dpBurner-Sender.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
-
-Check for lastest release and source code: https://github.com/villamany/3dpBurner-sender
-
-Copyright (C) 2014-2015  Adrian V. J. (villamany) contact: villamany@gmail.com</value>
+Elapsed time: {0}</value>
+  </data>
+  <data name="msbBoxCaptionFileDone" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="errorSerialRead" xml:space="preserve">
+    <value>Error reading line from serial port</value>
+  </data>
+  <data name="logErrorLineSend" xml:space="preserve">
+    <value>Sending line</value>
+  </data>
+  <data name="logErrorPortOpen" xml:space="preserve">
+    <value>Opening port</value>
+  </data>
+  <data name="logErrorPortClose" xml:space="preserve">
+    <value>Closing port</value>
+  </data>
+  <data name="logErrorPortsNotFound" xml:space="preserve">
+    <value>No serial ports found</value>
+  </data>
+  <data name="logErrorSettingsLoad" xml:space="preserve">
+    <value>Loading settings</value>
+  </data>
+  <data name="logErrorSettingsSave" xml:space="preserve">
+    <value>Saving settings</value>
+  </data>
+  <data name="logErrorFileOpen" xml:space="preserve">
+    <value>Error opening file</value>
+  </data>
+  <data name="logFileSend" xml:space="preserve">
+    <value>[Sending file...]
+</value>
+  </data>
+  <data name="logErrorGRBLStatus" xml:space="preserve">
+    <value>Retrieving GRBL status</value>
+  </data>
+  <data name="groupBoxCaptionLaser" xml:space="preserve">
+    <value>Laser</value>
+  </data>
+  <data name="groupBoxCaptionSpindle" xml:space="preserve">
+    <value>Spindle
+</value>
+  </data>
+  <data name="buttonTextPower" xml:space="preserve">
+    <value>PWR</value>
+  </data>
+  <data name="buttonTextSpeed" xml:space="preserve">
+    <value>RPM</value>
+  </data>
+  <data name="msbBoxMessageSettingsReset" xml:space="preserve">
+    <value>Restore Settings?</value>
+  </data>
+  <data name="msgBoxCaptionSettingsReset" xml:space="preserve">
+    <value>Restore Settings</value>
   </data>
 </root>

@@ -117,15 +117,103 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="richTextBox1.Text" xml:space="preserve">
-    <value>3dpBurner-Sender is a free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+  <data name="logErrorLineSend" xml:space="preserve">
+    <value>Отправка строки</value>
+  </data>
+  <data name="statusHome" xml:space="preserve">
+    <value>Домой</value>
+  </data>
+  <data name="statusAlarm" xml:space="preserve">
+    <value>Тревога</value>
+  </data>
+  <data name="applicationException" xml:space="preserve">
+    <value>Application exception</value>
+  </data>
+  <data name="groupBoxCaptionSpindle" xml:space="preserve">
+    <value>Шпиндель</value>
+  </data>
+  <data name="logFileDone" xml:space="preserve">
+    <value>[Задание выполнено @{0}]
+</value>
+  </data>
+  <data name="msbBoxCaptionFileDone" xml:space="preserve">
+    <value>Выполнено</value>
+  </data>
+  <data name="logErrorFileOpen" xml:space="preserve">
+    <value>Ошибка открытия файла</value>
+  </data>
+  <data name="logErrorGRBLStatus" xml:space="preserve">
+    <value>Запрос статуса GRBL</value>
+  </data>
+  <data name="labelTextFileProgress" xml:space="preserve">
+    <value>{0}% ({1}/{2} строк)</value>
+  </data>
+  <data name="statusQueue" xml:space="preserve">
+    <value>Очередь</value>
+  </data>
+  <data name="buttonTextPortOpen" xml:space="preserve">
+    <value>Открыть
+</value>
+  </data>
+  <data name="errorSerialRead" xml:space="preserve">
+    <value>Ошибка чтения строки из последовательного порта</value>
+  </data>
+  <data name="buttonTextPortClose" xml:space="preserve">
+    <value>Закрыть
+</value>
+  </data>
+  <data name="logError" xml:space="preserve">
+    <value>[Ошибка]: {0}. </value>
+  </data>
+  <data name="statusIdle" xml:space="preserve">
+    <value>Готов</value>
+  </data>
+  <data name="threadException" xml:space="preserve">
+    <value>Thread exception</value>
+  </data>
+  <data name="logFileSend" xml:space="preserve">
+    <value>[Отправка файла...]
+</value>
+  </data>
+  <data name="logErrorPortClose" xml:space="preserve">
+    <value>Закрытие порта</value>
+  </data>
+  <data name="logErrorPortsNotFound" xml:space="preserve">
+    <value>Последовательные порты не найдены</value>
+  </data>
+  <data name="buttonTextPower" xml:space="preserve">
+    <value>Мощность</value>
+  </data>
+  <data name="statusHold" xml:space="preserve">
+    <value>Пауза</value>
+  </data>
+  <data name="buttonTextSpeed" xml:space="preserve">
+    <value>Скорость</value>
+  </data>
+  <data name="statusRun" xml:space="preserve">
+    <value>Работа</value>
+  </data>
+  <data name="logErrorSettingsSave" xml:space="preserve">
+    <value>Сохранение настроек</value>
+  </data>
+  <data name="msgBoxCaptionSettingsReset" xml:space="preserve">
+    <value>Сброс настроек</value>
+  </data>
+  <data name="logErrorPortOpen" xml:space="preserve">
+    <value>Открытие порта</value>
+  </data>
+  <data name="groupBoxCaptionLaser" xml:space="preserve">
+    <value>Лазер</value>
+  </data>
+  <data name="logErrorSettingsLoad" xml:space="preserve">
+    <value>Загрузка настроек</value>
+  </data>
+  <data name="msbBoxMessageSettingsReset" xml:space="preserve">
+    <value>Сбросить настройки?</value>
+  </data>
+  <data name="msgBoxMessageFileDone" xml:space="preserve">
+    <value>Задание выполнено!
 
-3dpBurner-Sender is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License along with 3dpBurner-Sender.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
-
-Check for lastest release and source code: https://github.com/villamany/3dpBurner-sender
-
-Copyright (C) 2014-2015  Adrian V. J. (villamany) contact: villamany@gmail.com</value>
+Прошло времени: {0}</value>
   </data>
 </root>

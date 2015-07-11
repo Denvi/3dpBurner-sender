@@ -48,904 +48,852 @@ namespace _3dpBurner
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm3dpBurner));
-            this.bOpenPort = new System.Windows.Forms.Button();
-            this.cbPort = new System.Windows.Forms.ComboBox();
-            this.cbBaud = new System.Windows.Forms.ComboBox();
-            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
-            this.bXdown = new System.Windows.Forms.Button();
-            this.bXup = new System.Windows.Forms.Button();
-            this.bYup = new System.Windows.Forms.Button();
-            this.bYdown = new System.Windows.Forms.Button();
-            this.btnLaserOn = new System.Windows.Forms.Button();
-            this.btsLaserOff = new System.Windows.Forms.Button();
-            this.btnCustom1 = new System.Windows.Forms.Button();
-            this.btnUnlock = new System.Windows.Forms.Button();
-            this.tbFile = new System.Windows.Forms.TextBox();
-            this.bOpenfile = new System.Windows.Forms.Button();
-            this.bStart = new System.Windows.Forms.Button();
-            this.bSendCmd = new System.Windows.Forms.Button();
-            this.bHome = new System.Windows.Forms.Button();
-            this.tbStepSize = new System.Windows.Forms.TextBox();
-            this.pbFile = new System.Windows.Forms.ProgressBar();
-            this.pbBufer = new System.Windows.Forms.ProgressBar();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btnCustom2 = new System.Windows.Forms.Button();
-            this.tbCustom1 = new System.Windows.Forms.TextBox();
-            this.tbCustom2 = new System.Windows.Forms.TextBox();
-            this.btnReset = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.gbJog = new System.Windows.Forms.GroupBox();
-            this.btnZdown = new System.Windows.Forms.Button();
-            this.btnZup = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lblBuf = new System.Windows.Forms.Label();
-            this.lblElapsed = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.lblFileProgress = new System.Windows.Forms.Label();
-            this.tbLaserPwr = new System.Windows.Forms.TextBox();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.tmrUpdates = new System.Windows.Forms.Timer(this.components);
-            this.gbConecction = new System.Windows.Forms.GroupBox();
-            this.bRefreshport = new System.Windows.Forms.Button();
-            this.gbLaserControl = new System.Windows.Forms.GroupBox();
-            this.btnLaserPwr = new System.Windows.Forms.Button();
-            this.tbCommand = new System.Windows.Forms.TextBox();
-            this.gbConsole = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.rtbLog = new System.Windows.Forms.RichTextBox();
-            this.btlClearLog = new System.Windows.Forms.Button();
-            this.gbReference = new System.Windows.Forms.GroupBox();
-            this.btnZeroZ = new System.Windows.Forms.Button();
-            this.btnZeroXY = new System.Windows.Forms.Button();
-            this.btnZero = new System.Windows.Forms.Button();
-            this.gbCustom = new System.Windows.Forms.GroupBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.modeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.axisMillToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.axisLaserPWRSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.axisLaserPWRZToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.axisLaserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.restoreSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblRemaining = new System.Windows.Forms.Label();
-            this.gbJog.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.gbConecction.SuspendLayout();
-            this.gbLaserControl.SuspendLayout();
-            this.gbConsole.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.gbReference.SuspendLayout();
-            this.gbCustom.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // bOpenPort
-            // 
-            this.bOpenPort.Location = new System.Drawing.Point(148, 17);
-            this.bOpenPort.Name = "bOpenPort";
-            this.bOpenPort.Size = new System.Drawing.Size(64, 23);
-            this.bOpenPort.TabIndex = 3;
-            this.bOpenPort.Text = "Open";
-            this.bOpenPort.UseVisualStyleBackColor = true;
-            this.bOpenPort.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // cbPort
-            // 
-            this.cbPort.FormattingEnabled = true;
-            this.cbPort.Location = new System.Drawing.Point(9, 19);
-            this.cbPort.MaxLength = 10;
-            this.cbPort.Name = "cbPort";
-            this.cbPort.Size = new System.Drawing.Size(64, 21);
-            this.cbPort.TabIndex = 1;
-            this.cbPort.Text = "COM1";
-            // 
-            // cbBaud
-            // 
-            this.cbBaud.FormattingEnabled = true;
-            this.cbBaud.Items.AddRange(new object[] {
-            "9600",
-            "19200",
-            "38400",
-            "57600",
-            "115200"});
-            this.cbBaud.Location = new System.Drawing.Point(79, 18);
-            this.cbBaud.MaxLength = 10;
-            this.cbBaud.Name = "cbBaud";
-            this.cbBaud.Size = new System.Drawing.Size(63, 21);
-            this.cbBaud.TabIndex = 2;
-            this.cbBaud.Text = "115200";
-            // 
-            // serialPort1
-            // 
-            this.serialPort1.BaudRate = 115200;
-            this.serialPort1.ReadBufferSize = 2048;
-            this.serialPort1.ReadTimeout = 3000;
-            this.serialPort1.WriteTimeout = 3000;
-            this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
-            // 
-            // bXdown
-            // 
-            this.bXdown.BackColor = System.Drawing.SystemColors.Control;
-            this.bXdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bXdown.Location = new System.Drawing.Point(5, 66);
-            this.bXdown.Name = "bXdown";
-            this.bXdown.Size = new System.Drawing.Size(44, 44);
-            this.bXdown.TabIndex = 2;
-            this.bXdown.Text = "X-";
-            this.bXdown.UseVisualStyleBackColor = false;
-            this.bXdown.Click += new System.EventHandler(this.bXdown_Click);
-            // 
-            // bXup
-            // 
-            this.bXup.BackColor = System.Drawing.SystemColors.Control;
-            this.bXup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bXup.Location = new System.Drawing.Point(51, 66);
-            this.bXup.Name = "bXup";
-            this.bXup.Size = new System.Drawing.Size(44, 44);
-            this.bXup.TabIndex = 3;
-            this.bXup.Text = "X+";
-            this.bXup.UseVisualStyleBackColor = false;
-            this.bXup.Click += new System.EventHandler(this.bXup_Click);
-            // 
-            // bYup
-            // 
-            this.bYup.BackColor = System.Drawing.SystemColors.Control;
-            this.bYup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bYup.Location = new System.Drawing.Point(29, 21);
-            this.bYup.Name = "bYup";
-            this.bYup.Size = new System.Drawing.Size(44, 44);
-            this.bYup.TabIndex = 1;
-            this.bYup.Text = "Y+";
-            this.bYup.UseVisualStyleBackColor = false;
-            this.bYup.Click += new System.EventHandler(this.bYup_Click);
-            // 
-            // bYdown
-            // 
-            this.bYdown.BackColor = System.Drawing.SystemColors.Control;
-            this.bYdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bYdown.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.bYdown.Location = new System.Drawing.Point(29, 111);
-            this.bYdown.Name = "bYdown";
-            this.bYdown.Size = new System.Drawing.Size(44, 44);
-            this.bYdown.TabIndex = 4;
-            this.bYdown.Text = "Y-";
-            this.bYdown.UseVisualStyleBackColor = false;
-            this.bYdown.Click += new System.EventHandler(this.bYdown_Click);
-            // 
-            // btnLaserOn
-            // 
-            this.btnLaserOn.Location = new System.Drawing.Point(6, 17);
-            this.btnLaserOn.Name = "btnLaserOn";
-            this.btnLaserOn.Size = new System.Drawing.Size(67, 44);
-            this.btnLaserOn.TabIndex = 1;
-            this.btnLaserOn.Text = "On";
-            this.btnLaserOn.UseVisualStyleBackColor = true;
-            this.btnLaserOn.Click += new System.EventHandler(this.btnLaserOn_Click);
-            // 
-            // btsLaserOff
-            // 
-            this.btsLaserOff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btsLaserOff.Location = new System.Drawing.Point(79, 16);
-            this.btsLaserOff.Name = "btsLaserOff";
-            this.btsLaserOff.Size = new System.Drawing.Size(73, 72);
-            this.btsLaserOff.TabIndex = 2;
-            this.btsLaserOff.Text = "Off";
-            this.btsLaserOff.UseVisualStyleBackColor = true;
-            this.btsLaserOff.Click += new System.EventHandler(this.btsLaserOff_Click);
-            // 
-            // btnCustom1
-            // 
-            this.btnCustom1.Location = new System.Drawing.Point(6, 19);
-            this.btnCustom1.Name = "btnCustom1";
-            this.btnCustom1.Size = new System.Drawing.Size(97, 23);
-            this.btnCustom1.TabIndex = 1;
-            this.btnCustom1.Text = "Custom1";
-            this.btnCustom1.UseVisualStyleBackColor = true;
-            this.btnCustom1.Click += new System.EventHandler(this.btnCustom1_Click);
-            // 
-            // btnUnlock
-            // 
-            this.btnUnlock.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUnlock.Location = new System.Drawing.Point(105, 17);
-            this.btnUnlock.Name = "btnUnlock";
-            this.btnUnlock.Size = new System.Drawing.Size(48, 45);
-            this.btnUnlock.TabIndex = 6;
-            this.btnUnlock.Text = "Unlock";
-            this.btnUnlock.UseVisualStyleBackColor = true;
-            this.btnUnlock.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // tbFile
-            // 
-            this.tbFile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbFile.Location = new System.Drawing.Point(7, 15);
-            this.tbFile.Name = "tbFile";
-            this.tbFile.Size = new System.Drawing.Size(203, 20);
-            this.tbFile.TabIndex = 1;
-            // 
-            // bOpenfile
-            // 
-            this.bOpenfile.Location = new System.Drawing.Point(214, 13);
-            this.bOpenfile.Name = "bOpenfile";
-            this.bOpenfile.Size = new System.Drawing.Size(30, 23);
-            this.bOpenfile.TabIndex = 2;
-            this.bOpenfile.Text = "...";
-            this.bOpenfile.Click += new System.EventHandler(this.bOpenfile_Click);
-            // 
-            // bStart
-            // 
-            this.bStart.Location = new System.Drawing.Point(7, 42);
-            this.bStart.Name = "bStart";
-            this.bStart.Size = new System.Drawing.Size(75, 23);
-            this.bStart.TabIndex = 3;
-            this.bStart.Text = "Start";
-            this.bStart.UseVisualStyleBackColor = true;
-            this.bStart.Click += new System.EventHandler(this.bStar_Click);
-            // 
-            // bSendCmd
-            // 
-            this.bSendCmd.Location = new System.Drawing.Point(334, 133);
-            this.bSendCmd.Name = "bSendCmd";
-            this.bSendCmd.Size = new System.Drawing.Size(44, 23);
-            this.bSendCmd.TabIndex = 4;
-            this.bSendCmd.Text = "Send";
-            this.bSendCmd.UseVisualStyleBackColor = true;
-            this.bSendCmd.Click += new System.EventHandler(this.bSendCmd_Click);
-            // 
-            // bHome
-            // 
-            this.bHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bHome.Location = new System.Drawing.Point(5, 17);
-            this.bHome.Name = "bHome";
-            this.bHome.Size = new System.Drawing.Size(48, 45);
-            this.bHome.TabIndex = 1;
-            this.bHome.Text = "GoHome";
-            this.bHome.UseVisualStyleBackColor = true;
-            this.bHome.Click += new System.EventHandler(this.bHome_Click);
-            // 
-            // tbStepSize
-            // 
-            this.tbStepSize.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbStepSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbStepSize.Location = new System.Drawing.Point(98, 125);
-            this.tbStepSize.MaxLength = 3;
-            this.tbStepSize.Name = "tbStepSize";
-            this.tbStepSize.Size = new System.Drawing.Size(40, 23);
-            this.tbStepSize.TabIndex = 7;
-            this.tbStepSize.Text = "1";
-            this.tbStepSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // pbFile
-            // 
-            this.pbFile.Location = new System.Drawing.Point(7, 87);
-            this.pbFile.Name = "pbFile";
-            this.pbFile.Size = new System.Drawing.Size(237, 20);
-            this.pbFile.Step = 1;
-            this.pbFile.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.pbFile.TabIndex = 40;
-            // 
-            // pbBufer
-            // 
-            this.pbBufer.BackColor = System.Drawing.SystemColors.Control;
-            this.pbBufer.Location = new System.Drawing.Point(115, 45);
-            this.pbBufer.Name = "pbBufer";
-            this.pbBufer.Size = new System.Drawing.Size(105, 8);
-            this.pbBufer.Step = 1;
-            this.pbBufer.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.pbBufer.TabIndex = 41;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(90, 42);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(26, 13);
-            this.label7.TabIndex = 43;
-            this.label7.Text = "Buf:";
-            // 
-            // btnCustom2
-            // 
-            this.btnCustom2.Location = new System.Drawing.Point(110, 19);
-            this.btnCustom2.Name = "btnCustom2";
-            this.btnCustom2.Size = new System.Drawing.Size(97, 23);
-            this.btnCustom2.TabIndex = 3;
-            this.btnCustom2.Text = "Custom2";
-            this.btnCustom2.UseVisualStyleBackColor = true;
-            this.btnCustom2.Click += new System.EventHandler(this.btnCustom2_Click);
-            // 
-            // tbCustom1
-            // 
-            this.tbCustom1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbCustom1.Location = new System.Drawing.Point(6, 48);
-            this.tbCustom1.MaxLength = 79;
-            this.tbCustom1.Name = "tbCustom1";
-            this.tbCustom1.Size = new System.Drawing.Size(97, 20);
-            this.tbCustom1.TabIndex = 2;
-            this.tbCustom1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCustom1_KeyPress);
-            // 
-            // tbCustom2
-            // 
-            this.tbCustom2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbCustom2.Location = new System.Drawing.Point(110, 48);
-            this.tbCustom2.MaxLength = 79;
-            this.tbCustom2.Name = "tbCustom2";
-            this.tbCustom2.Size = new System.Drawing.Size(97, 20);
-            this.tbCustom2.TabIndex = 4;
-            this.tbCustom2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCustom2_KeyPress);
-            // 
-            // btnReset
-            // 
-            this.btnReset.BackColor = System.Drawing.Color.Red;
-            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset.ForeColor = System.Drawing.Color.Yellow;
-            this.btnReset.Location = new System.Drawing.Point(395, 282);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(214, 84);
-            this.btnReset.TabIndex = 8;
-            this.btnReset.Text = "Reset";
-            this.btnReset.UseVisualStyleBackColor = false;
-            this.btnReset.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(145, 15);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(35, 20);
-            this.button12.TabIndex = 8;
-            this.button12.Text = ".01";
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
-            // 
-            // button19
-            // 
-            this.button19.Location = new System.Drawing.Point(145, 41);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(35, 20);
-            this.button19.TabIndex = 9;
-            this.button19.Text = ".1";
-            this.button19.UseVisualStyleBackColor = true;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
-            // 
-            // button20
-            // 
-            this.button20.Location = new System.Drawing.Point(145, 66);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(35, 20);
-            this.button20.TabIndex = 10;
-            this.button20.Text = "1";
-            this.button20.UseVisualStyleBackColor = true;
-            this.button20.Click += new System.EventHandler(this.button20_Click);
-            // 
-            // button21
-            // 
-            this.button21.Location = new System.Drawing.Point(145, 117);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(35, 20);
-            this.button21.TabIndex = 12;
-            this.button21.Text = "10";
-            this.button21.UseVisualStyleBackColor = true;
-            this.button21.Click += new System.EventHandler(this.button21_Click);
-            // 
-            // button22
-            // 
-            this.button22.Location = new System.Drawing.Point(145, 142);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(35, 20);
-            this.button22.TabIndex = 13;
-            this.button22.Text = "100";
-            this.button22.UseVisualStyleBackColor = true;
-            this.button22.Click += new System.EventHandler(this.button22_Click);
-            // 
-            // gbJog
-            // 
-            this.gbJog.BackColor = System.Drawing.SystemColors.Control;
-            this.gbJog.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.gbJog.Controls.Add(this.btnZdown);
-            this.gbJog.Controls.Add(this.btnZup);
-            this.gbJog.Controls.Add(this.button1);
-            this.gbJog.Controls.Add(this.button22);
-            this.gbJog.Controls.Add(this.button21);
-            this.gbJog.Controls.Add(this.button20);
-            this.gbJog.Controls.Add(this.button19);
-            this.gbJog.Controls.Add(this.button12);
-            this.gbJog.Controls.Add(this.tbStepSize);
-            this.gbJog.Controls.Add(this.bYdown);
-            this.gbJog.Controls.Add(this.bYup);
-            this.gbJog.Controls.Add(this.bXup);
-            this.gbJog.Controls.Add(this.bXdown);
-            this.gbJog.Location = new System.Drawing.Point(261, 28);
-            this.gbJog.Name = "gbJog";
-            this.gbJog.Size = new System.Drawing.Size(186, 171);
-            this.gbJog.TabIndex = 3;
-            this.gbJog.TabStop = false;
-            this.gbJog.Text = "Motion";
-            // 
-            // btnZdown
-            // 
-            this.btnZdown.BackColor = System.Drawing.SystemColors.Control;
-            this.btnZdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnZdown.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnZdown.Location = new System.Drawing.Point(99, 67);
-            this.btnZdown.Name = "btnZdown";
-            this.btnZdown.Size = new System.Drawing.Size(38, 34);
-            this.btnZdown.TabIndex = 6;
-            this.btnZdown.Text = "Z-";
-            this.btnZdown.UseVisualStyleBackColor = false;
-            this.btnZdown.Click += new System.EventHandler(this.btnZdown_Click);
-            // 
-            // btnZup
-            // 
-            this.btnZup.BackColor = System.Drawing.SystemColors.Control;
-            this.btnZup.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnZup.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnZup.Location = new System.Drawing.Point(99, 27);
-            this.btnZup.Name = "btnZup";
-            this.btnZup.Size = new System.Drawing.Size(38, 34);
-            this.btnZup.TabIndex = 5;
-            this.btnZup.Text = "Z+";
-            this.btnZup.UseVisualStyleBackColor = false;
-            this.btnZup.Click += new System.EventHandler(this.btnZup_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(145, 92);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(35, 20);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "5";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.lblRemaining);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.lblBuf);
-            this.groupBox2.Controls.Add(this.lblElapsed);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.lblFileProgress);
-            this.groupBox2.Controls.Add(this.pbFile);
-            this.groupBox2.Controls.Add(this.bStart);
-            this.groupBox2.Controls.Add(this.bOpenfile);
-            this.groupBox2.Controls.Add(this.tbFile);
-            this.groupBox2.Controls.Add(this.pbBufer);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Location = new System.Drawing.Point(4, 86);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(251, 113);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "File";
-            // 
-            // lblBuf
-            // 
-            this.lblBuf.AutoSize = true;
-            this.lblBuf.Location = new System.Drawing.Point(221, 42);
-            this.lblBuf.Name = "lblBuf";
-            this.lblBuf.Size = new System.Drawing.Size(25, 13);
-            this.lblBuf.TabIndex = 47;
-            this.lblBuf.Text = "000";
-            // 
-            // lblElapsed
-            // 
-            this.lblElapsed.AutoSize = true;
-            this.lblElapsed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lblElapsed.Location = new System.Drawing.Point(199, 57);
-            this.lblElapsed.Name = "lblElapsed";
-            this.lblElapsed.Size = new System.Drawing.Size(49, 13);
-            this.lblElapsed.TabIndex = 45;
-            this.lblElapsed.Text = "00:00:00";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(155, 57);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 13);
-            this.label8.TabIndex = 46;
-            this.label8.Text = "Elapsed:";
-            // 
-            // lblFileProgress
-            // 
-            this.lblFileProgress.AutoSize = true;
-            this.lblFileProgress.BackColor = System.Drawing.Color.Transparent;
-            this.lblFileProgress.Location = new System.Drawing.Point(8, 70);
-            this.lblFileProgress.Name = "lblFileProgress";
-            this.lblFileProgress.Size = new System.Drawing.Size(60, 13);
-            this.lblFileProgress.TabIndex = 44;
-            this.lblFileProgress.Text = "0% (0 lines)";
-            // 
-            // tbLaserPwr
-            // 
-            this.tbLaserPwr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbLaserPwr.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLaserPwr.Location = new System.Drawing.Point(43, 65);
-            this.tbLaserPwr.MaxLength = 4;
-            this.tbLaserPwr.Name = "tbLaserPwr";
-            this.tbLaserPwr.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbLaserPwr.Size = new System.Drawing.Size(33, 23);
-            this.tbLaserPwr.TabIndex = 4;
-            this.tbLaserPwr.Text = "0";
-            this.tbLaserPwr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbLaserPwr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbLaserPwr_KeyPress);
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.Filter = "G-Code Files(*.CNC;*.NC;*.TAP;*.TXT)|*.CNC;*.NC;*.TAP;*.TXT|All files (*.*)|*.*";
-            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
-            // 
-            // tmrUpdates
-            // 
-            this.tmrUpdates.Enabled = true;
-            this.tmrUpdates.Interval = 500;
-            this.tmrUpdates.Tick += new System.EventHandler(this.tmrUpdates_Tick);
-            // 
-            // gbConecction
-            // 
-            this.gbConecction.Controls.Add(this.bRefreshport);
-            this.gbConecction.Controls.Add(this.cbBaud);
-            this.gbConecction.Controls.Add(this.cbPort);
-            this.gbConecction.Controls.Add(this.bOpenPort);
-            this.gbConecction.Location = new System.Drawing.Point(3, 28);
-            this.gbConecction.Name = "gbConecction";
-            this.gbConecction.Size = new System.Drawing.Size(252, 50);
-            this.gbConecction.TabIndex = 1;
-            this.gbConecction.TabStop = false;
-            this.gbConecction.Text = "Connection";
-            // 
-            // bRefreshport
-            // 
-            this.bRefreshport.BackgroundImage = global::_3dpBurner.Properties.Resources.refresh;
-            this.bRefreshport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bRefreshport.Location = new System.Drawing.Point(217, 17);
-            this.bRefreshport.Name = "bRefreshport";
-            this.bRefreshport.Size = new System.Drawing.Size(25, 23);
-            this.bRefreshport.TabIndex = 4;
-            this.bRefreshport.UseVisualStyleBackColor = true;
-            this.bRefreshport.Click += new System.EventHandler(this.bRefreshport_Click);
-            // 
-            // gbLaserControl
-            // 
-            this.gbLaserControl.Controls.Add(this.btnLaserPwr);
-            this.gbLaserControl.Controls.Add(this.tbLaserPwr);
-            this.gbLaserControl.Controls.Add(this.btsLaserOff);
-            this.gbLaserControl.Controls.Add(this.btnLaserOn);
-            this.gbLaserControl.Location = new System.Drawing.Point(453, 28);
-            this.gbLaserControl.Name = "gbLaserControl";
-            this.gbLaserControl.Size = new System.Drawing.Size(158, 96);
-            this.gbLaserControl.TabIndex = 4;
-            this.gbLaserControl.TabStop = false;
-            this.gbLaserControl.Text = "Laser";
-            // 
-            // btnLaserPwr
-            // 
-            this.btnLaserPwr.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLaserPwr.Location = new System.Drawing.Point(4, 63);
-            this.btnLaserPwr.Name = "btnLaserPwr";
-            this.btnLaserPwr.Size = new System.Drawing.Size(38, 27);
-            this.btnLaserPwr.TabIndex = 3;
-            this.btnLaserPwr.Text = "PWR";
-            this.btnLaserPwr.UseVisualStyleBackColor = true;
-            this.btnLaserPwr.Click += new System.EventHandler(this.btnLaserPwr_Click);
-            // 
-            // tbCommand
-            // 
-            this.tbCommand.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbCommand.Location = new System.Drawing.Point(78, 135);
-            this.tbCommand.Name = "tbCommand";
-            this.tbCommand.Size = new System.Drawing.Size(254, 20);
-            this.tbCommand.TabIndex = 3;
-            this.tbCommand.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCommand_KeyPress);
-            // 
-            // gbConsole
-            // 
-            this.gbConsole.Controls.Add(this.panel1);
-            this.gbConsole.Controls.Add(this.btlClearLog);
-            this.gbConsole.Controls.Add(this.bSendCmd);
-            this.gbConsole.Controls.Add(this.tbCommand);
-            this.gbConsole.Location = new System.Drawing.Point(3, 204);
-            this.gbConsole.Name = "gbConsole";
-            this.gbConsole.Size = new System.Drawing.Size(386, 163);
-            this.gbConsole.TabIndex = 6;
-            this.gbConsole.TabStop = false;
-            this.gbConsole.Text = "Console";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.rtbLog);
-            this.panel1.Location = new System.Drawing.Point(7, 16);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(371, 112);
-            this.panel1.TabIndex = 30;
-            // 
-            // rtbLog
-            // 
-            this.rtbLog.BackColor = System.Drawing.SystemColors.Window;
-            this.rtbLog.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtbLog.DetectUrls = false;
-            this.rtbLog.Location = new System.Drawing.Point(1, 1);
-            this.rtbLog.Name = "rtbLog";
-            this.rtbLog.ReadOnly = true;
-            this.rtbLog.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.rtbLog.Size = new System.Drawing.Size(369, 110);
-            this.rtbLog.TabIndex = 1;
-            this.rtbLog.Text = "";
-            this.rtbLog.WordWrap = false;
-            // 
-            // btlClearLog
-            // 
-            this.btlClearLog.Location = new System.Drawing.Point(6, 133);
-            this.btlClearLog.Name = "btlClearLog";
-            this.btlClearLog.Size = new System.Drawing.Size(66, 24);
-            this.btlClearLog.TabIndex = 2;
-            this.btlClearLog.Text = "ClearLog";
-            this.btlClearLog.UseVisualStyleBackColor = true;
-            this.btlClearLog.Click += new System.EventHandler(this.btlClearLog_Click);
-            // 
-            // gbReference
-            // 
-            this.gbReference.Controls.Add(this.btnZeroZ);
-            this.gbReference.Controls.Add(this.btnZeroXY);
-            this.gbReference.Controls.Add(this.btnZero);
-            this.gbReference.Controls.Add(this.bHome);
-            this.gbReference.Controls.Add(this.btnUnlock);
-            this.gbReference.Location = new System.Drawing.Point(452, 130);
-            this.gbReference.Name = "gbReference";
-            this.gbReference.Size = new System.Drawing.Size(158, 69);
-            this.gbReference.TabIndex = 5;
-            this.gbReference.TabStop = false;
-            this.gbReference.Text = "Reference";
-            // 
-            // btnZeroZ
-            // 
-            this.btnZeroZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnZeroZ.Location = new System.Drawing.Point(53, 42);
-            this.btnZeroZ.Name = "btnZeroZ";
-            this.btnZeroZ.Size = new System.Drawing.Size(52, 20);
-            this.btnZeroZ.TabIndex = 4;
-            this.btnZeroZ.Text = "ZeroZ";
-            this.btnZeroZ.UseVisualStyleBackColor = true;
-            this.btnZeroZ.Click += new System.EventHandler(this.btnZeroZ_Click);
-            // 
-            // btnZeroXY
-            // 
-            this.btnZeroXY.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnZeroXY.Location = new System.Drawing.Point(53, 17);
-            this.btnZeroXY.Name = "btnZeroXY";
-            this.btnZeroXY.Size = new System.Drawing.Size(52, 25);
-            this.btnZeroXY.TabIndex = 3;
-            this.btnZeroXY.Text = "ZeroXY";
-            this.btnZeroXY.UseVisualStyleBackColor = true;
-            this.btnZeroXY.Click += new System.EventHandler(this.btnZeroXY_Click);
-            // 
-            // btnZero
-            // 
-            this.btnZero.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnZero.Location = new System.Drawing.Point(55, 17);
-            this.btnZero.Name = "btnZero";
-            this.btnZero.Size = new System.Drawing.Size(48, 45);
-            this.btnZero.TabIndex = 5;
-            this.btnZero.Text = "Zero";
-            this.btnZero.UseVisualStyleBackColor = true;
-            this.btnZero.Click += new System.EventHandler(this.btnZero_Click);
-            // 
-            // gbCustom
-            // 
-            this.gbCustom.Controls.Add(this.tbCustom2);
-            this.gbCustom.Controls.Add(this.tbCustom1);
-            this.gbCustom.Controls.Add(this.btnCustom2);
-            this.gbCustom.Controls.Add(this.btnCustom1);
-            this.gbCustom.Location = new System.Drawing.Point(396, 204);
-            this.gbCustom.Name = "gbCustom";
-            this.gbCustom.Size = new System.Drawing.Size(215, 75);
-            this.gbCustom.TabIndex = 7;
-            this.gbCustom.TabStop = false;
-            this.gbCustom.Text = "Custom";
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.modeToolStripMenuItem,
-            this.settingsToolStripMenuItem,
-            this.helpToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(615, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // modeToolStripMenuItem
-            // 
-            this.modeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.axisMillToolStripMenuItem,
-            this.axisLaserPWRSToolStripMenuItem,
-            this.axisLaserPWRZToolStripMenuItem,
-            this.axisLaserToolStripMenuItem});
-            this.modeToolStripMenuItem.Name = "modeToolStripMenuItem";
-            this.modeToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.modeToolStripMenuItem.Text = "Mode";
-            // 
-            // axisMillToolStripMenuItem
-            // 
-            this.axisMillToolStripMenuItem.CheckOnClick = true;
-            this.axisMillToolStripMenuItem.Name = "axisMillToolStripMenuItem";
-            this.axisMillToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
-            this.axisMillToolStripMenuItem.Text = "3axisMill";
-            this.axisMillToolStripMenuItem.Click += new System.EventHandler(this.axisMillToolStripMenuItem_Click);
-            // 
-            // axisLaserPWRSToolStripMenuItem
-            // 
-            this.axisLaserPWRSToolStripMenuItem.Checked = true;
-            this.axisLaserPWRSToolStripMenuItem.CheckOnClick = true;
-            this.axisLaserPWRSToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.axisLaserPWRSToolStripMenuItem.Name = "axisLaserPWRSToolStripMenuItem";
-            this.axisLaserPWRSToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
-            this.axisLaserPWRSToolStripMenuItem.Text = "2axisLaserPWR_S";
-            this.axisLaserPWRSToolStripMenuItem.Click += new System.EventHandler(this.axisLaserPWRSToolStripMenuItem_Click);
-            // 
-            // axisLaserPWRZToolStripMenuItem
-            // 
-            this.axisLaserPWRZToolStripMenuItem.CheckOnClick = true;
-            this.axisLaserPWRZToolStripMenuItem.Name = "axisLaserPWRZToolStripMenuItem";
-            this.axisLaserPWRZToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
-            this.axisLaserPWRZToolStripMenuItem.Text = "2axisLaserPWR_Z";
-            this.axisLaserPWRZToolStripMenuItem.Click += new System.EventHandler(this.axisLaserPWRZToolStripMenuItem_Click);
-            // 
-            // axisLaserToolStripMenuItem
-            // 
-            this.axisLaserToolStripMenuItem.CheckOnClick = true;
-            this.axisLaserToolStripMenuItem.Name = "axisLaserToolStripMenuItem";
-            this.axisLaserToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
-            this.axisLaserToolStripMenuItem.Text = "3axisLaser";
-            this.axisLaserToolStripMenuItem.Click += new System.EventHandler(this.axisLaserToolStripMenuItem_Click);
-            // 
-            // settingsToolStripMenuItem
-            // 
-            this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.restoreSettingsToolStripMenuItem});
-            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.settingsToolStripMenuItem.Text = "Settings";
-            // 
-            // restoreSettingsToolStripMenuItem
-            // 
-            this.restoreSettingsToolStripMenuItem.Name = "restoreSettingsToolStripMenuItem";
-            this.restoreSettingsToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
-            this.restoreSettingsToolStripMenuItem.Text = "Restore Settings";
-            this.restoreSettingsToolStripMenuItem.Click += new System.EventHandler(this.restoreSettingsToolStripMenuItem_Click);
-            // 
-            // helpToolStripMenuItem
-            // 
-            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem});
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.helpToolStripMenuItem.Text = "Help";
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
-            this.aboutToolStripMenuItem.Text = "About";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.BackColor = System.Drawing.SystemColors.Control;
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel2,
-            this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 366);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(615, 22);
-            this.statusStrip1.SizingGrip = false;
-            this.statusStrip1.TabIndex = 64;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel2
-            // 
-            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(42, 17);
-            this.toolStripStatusLabel2.Text = "Status:";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(28, 17);
-            this.toolStripStatusLabel1.Text = "       ";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(143, 72);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 13);
-            this.label1.TabIndex = 48;
-            this.label1.Text = "Remaining:";
-            // 
-            // lblRemaining
-            // 
-            this.lblRemaining.AutoSize = true;
-            this.lblRemaining.ForeColor = System.Drawing.Color.Red;
-            this.lblRemaining.Location = new System.Drawing.Point(199, 72);
-            this.lblRemaining.Name = "lblRemaining";
-            this.lblRemaining.Size = new System.Drawing.Size(49, 13);
-            this.lblRemaining.TabIndex = 49;
-            this.lblRemaining.Text = "00:00:00";
-            // 
-            // frm3dpBurner
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(615, 388);
-            this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.gbCustom);
-            this.Controls.Add(this.gbReference);
-            this.Controls.Add(this.gbConsole);
-            this.Controls.Add(this.gbLaserControl);
-            this.Controls.Add(this.gbConecction);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.gbJog);
-            this.Controls.Add(this.btnReset);
-            this.Controls.Add(this.menuStrip1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.menuStrip1;
-            this.MaximizeBox = false;
-            this.Name = "frm3dpBurner";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "3dpBurner";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm3dpBurner_FormClosing);
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.gbJog.ResumeLayout(false);
-            this.gbJog.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.gbConecction.ResumeLayout(false);
-            this.gbLaserControl.ResumeLayout(false);
-            this.gbLaserControl.PerformLayout();
-            this.gbConsole.ResumeLayout(false);
-            this.gbConsole.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.gbReference.ResumeLayout(false);
-            this.gbCustom.ResumeLayout(false);
-            this.gbCustom.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+        	this.components = new System.ComponentModel.Container();
+        	System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm3dpBurner));
+        	this.bOpenPort = new System.Windows.Forms.Button();
+        	this.cbPort = new System.Windows.Forms.ComboBox();
+        	this.cbBaud = new System.Windows.Forms.ComboBox();
+        	this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
+        	this.bXdown = new System.Windows.Forms.Button();
+        	this.bXup = new System.Windows.Forms.Button();
+        	this.bYup = new System.Windows.Forms.Button();
+        	this.bYdown = new System.Windows.Forms.Button();
+        	this.btnLaserOn = new System.Windows.Forms.Button();
+        	this.btsLaserOff = new System.Windows.Forms.Button();
+        	this.btnCustom1 = new System.Windows.Forms.Button();
+        	this.btnUnlock = new System.Windows.Forms.Button();
+        	this.tbFile = new System.Windows.Forms.TextBox();
+        	this.bOpenfile = new System.Windows.Forms.Button();
+        	this.bStart = new System.Windows.Forms.Button();
+        	this.bSendCmd = new System.Windows.Forms.Button();
+        	this.bHome = new System.Windows.Forms.Button();
+        	this.tbStepSize = new System.Windows.Forms.TextBox();
+        	this.pbFile = new System.Windows.Forms.ProgressBar();
+        	this.pbBufer = new System.Windows.Forms.ProgressBar();
+        	this.label7 = new System.Windows.Forms.Label();
+        	this.btnCustom2 = new System.Windows.Forms.Button();
+        	this.tbCustom1 = new System.Windows.Forms.TextBox();
+        	this.tbCustom2 = new System.Windows.Forms.TextBox();
+        	this.btnReset = new System.Windows.Forms.Button();
+        	this.button12 = new System.Windows.Forms.Button();
+        	this.button19 = new System.Windows.Forms.Button();
+        	this.button20 = new System.Windows.Forms.Button();
+        	this.button21 = new System.Windows.Forms.Button();
+        	this.button22 = new System.Windows.Forms.Button();
+        	this.gbJog = new System.Windows.Forms.GroupBox();
+        	this.chkAbsolute = new System.Windows.Forms.CheckBox();
+        	this.label9 = new System.Windows.Forms.Label();
+        	this.label6 = new System.Windows.Forms.Label();
+        	this.btnZdown = new System.Windows.Forms.Button();
+        	this.btnZup = new System.Windows.Forms.Button();
+        	this.button1 = new System.Windows.Forms.Button();
+        	this.groupBox2 = new System.Windows.Forms.GroupBox();
+        	this.lblRemaining = new System.Windows.Forms.Label();
+        	this.lblBuf = new System.Windows.Forms.Label();
+        	this.lblFileProgress = new System.Windows.Forms.Label();
+        	this.label1 = new System.Windows.Forms.Label();
+        	this.lblElapsed = new System.Windows.Forms.Label();
+        	this.label8 = new System.Windows.Forms.Label();
+        	this.tbLaserPwr = new System.Windows.Forms.TextBox();
+        	this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+        	this.tmrUpdates = new System.Windows.Forms.Timer(this.components);
+        	this.gbConecction = new System.Windows.Forms.GroupBox();
+        	this.label5 = new System.Windows.Forms.Label();
+        	this.label4 = new System.Windows.Forms.Label();
+        	this.bRefreshport = new System.Windows.Forms.Button();
+        	this.gbLaserControl = new System.Windows.Forms.GroupBox();
+        	this.btnLaserPwr = new System.Windows.Forms.Button();
+        	this.tbCommand = new System.Windows.Forms.TextBox();
+        	this.gbConsole = new System.Windows.Forms.GroupBox();
+        	this.label3 = new System.Windows.Forms.Label();
+        	this.label2 = new System.Windows.Forms.Label();
+        	this.panel1 = new System.Windows.Forms.Panel();
+        	this.rtbLog = new System.Windows.Forms.RichTextBox();
+        	this.btlClearLog = new System.Windows.Forms.Button();
+        	this.gbReference = new System.Windows.Forms.GroupBox();
+        	this.btnZeroZ = new System.Windows.Forms.Button();
+        	this.btnZeroXY = new System.Windows.Forms.Button();
+        	this.btnZero = new System.Windows.Forms.Button();
+        	this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+        	this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+        	this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+        	this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+        	this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+        	this.modeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+        	this.axisMillToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+        	this.axisLaserPWRSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+        	this.axisLaserPWRZToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+        	this.axisLaserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+        	this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+        	this.restoreSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+        	this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+        	this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+        	this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+        	this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+        	this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+        	this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
+        	this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
+        	this.lblWPos = new System.Windows.Forms.ToolStripStatusLabel();
+        	this.lblWPosX = new System.Windows.Forms.ToolStripStatusLabel();
+        	this.lblWPosY = new System.Windows.Forms.ToolStripStatusLabel();
+        	this.lblWPosZ = new System.Windows.Forms.ToolStripStatusLabel();
+        	this.toolStripStatusLabel8 = new System.Windows.Forms.ToolStripStatusLabel();
+        	this.lblMPosX = new System.Windows.Forms.ToolStripStatusLabel();
+        	this.lblMPosY = new System.Windows.Forms.ToolStripStatusLabel();
+        	this.lblMPosZ = new System.Windows.Forms.ToolStripStatusLabel();
+        	this.gbJog.SuspendLayout();
+        	this.groupBox2.SuspendLayout();
+        	this.gbConecction.SuspendLayout();
+        	this.gbLaserControl.SuspendLayout();
+        	this.gbConsole.SuspendLayout();
+        	this.panel1.SuspendLayout();
+        	this.gbReference.SuspendLayout();
+        	this.menuStrip1.SuspendLayout();
+        	this.statusStrip1.SuspendLayout();
+        	this.SuspendLayout();
+        	// 
+        	// bOpenPort
+        	// 
+        	resources.ApplyResources(this.bOpenPort, "bOpenPort");
+        	this.bOpenPort.Name = "bOpenPort";
+        	this.bOpenPort.UseVisualStyleBackColor = true;
+        	this.bOpenPort.Click += new System.EventHandler(this.button1_Click);
+        	// 
+        	// cbPort
+        	// 
+        	resources.ApplyResources(this.cbPort, "cbPort");
+        	this.cbPort.FormattingEnabled = true;
+        	this.cbPort.Name = "cbPort";
+        	// 
+        	// cbBaud
+        	// 
+        	resources.ApplyResources(this.cbBaud, "cbBaud");
+        	this.cbBaud.FormattingEnabled = true;
+        	this.cbBaud.Items.AddRange(new object[] {
+        	        	        	resources.GetString("cbBaud.Items"),
+        	        	        	resources.GetString("cbBaud.Items1"),
+        	        	        	resources.GetString("cbBaud.Items2"),
+        	        	        	resources.GetString("cbBaud.Items3"),
+        	        	        	resources.GetString("cbBaud.Items4")});
+        	this.cbBaud.Name = "cbBaud";
+        	// 
+        	// serialPort1
+        	// 
+        	this.serialPort1.BaudRate = 115200;
+        	this.serialPort1.ReadBufferSize = 2048;
+        	this.serialPort1.ReadTimeout = 3000;
+        	this.serialPort1.WriteTimeout = 3000;
+        	this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
+        	// 
+        	// bXdown
+        	// 
+        	resources.ApplyResources(this.bXdown, "bXdown");
+        	this.bXdown.BackColor = System.Drawing.SystemColors.ActiveCaption;
+        	this.bXdown.Name = "bXdown";
+        	this.bXdown.UseVisualStyleBackColor = false;
+        	this.bXdown.Click += new System.EventHandler(this.bXdown_Click);
+        	// 
+        	// bXup
+        	// 
+        	resources.ApplyResources(this.bXup, "bXup");
+        	this.bXup.BackColor = System.Drawing.SystemColors.ActiveCaption;
+        	this.bXup.Name = "bXup";
+        	this.bXup.UseVisualStyleBackColor = false;
+        	this.bXup.Click += new System.EventHandler(this.bXup_Click);
+        	// 
+        	// bYup
+        	// 
+        	resources.ApplyResources(this.bYup, "bYup");
+        	this.bYup.BackColor = System.Drawing.SystemColors.ActiveCaption;
+        	this.bYup.Name = "bYup";
+        	this.bYup.UseVisualStyleBackColor = false;
+        	this.bYup.Click += new System.EventHandler(this.bYup_Click);
+        	// 
+        	// bYdown
+        	// 
+        	resources.ApplyResources(this.bYdown, "bYdown");
+        	this.bYdown.BackColor = System.Drawing.SystemColors.ActiveCaption;
+        	this.bYdown.ForeColor = System.Drawing.SystemColors.ControlText;
+        	this.bYdown.Name = "bYdown";
+        	this.bYdown.UseVisualStyleBackColor = false;
+        	this.bYdown.Click += new System.EventHandler(this.bYdown_Click);
+        	// 
+        	// btnLaserOn
+        	// 
+        	resources.ApplyResources(this.btnLaserOn, "btnLaserOn");
+        	this.btnLaserOn.Name = "btnLaserOn";
+        	this.btnLaserOn.UseVisualStyleBackColor = false;
+        	this.btnLaserOn.Click += new System.EventHandler(this.btnLaserOn_Click);
+        	// 
+        	// btsLaserOff
+        	// 
+        	resources.ApplyResources(this.btsLaserOff, "btsLaserOff");
+        	this.btsLaserOff.Name = "btsLaserOff";
+        	this.btsLaserOff.UseVisualStyleBackColor = false;
+        	this.btsLaserOff.Click += new System.EventHandler(this.btsLaserOff_Click);
+        	// 
+        	// btnCustom1
+        	// 
+        	resources.ApplyResources(this.btnCustom1, "btnCustom1");
+        	this.btnCustom1.Name = "btnCustom1";
+        	this.btnCustom1.UseVisualStyleBackColor = true;
+        	this.btnCustom1.Click += new System.EventHandler(this.btnCustom1_Click);
+        	// 
+        	// btnUnlock
+        	// 
+        	resources.ApplyResources(this.btnUnlock, "btnUnlock");
+        	this.btnUnlock.Name = "btnUnlock";
+        	this.btnUnlock.UseVisualStyleBackColor = false;
+        	this.btnUnlock.Click += new System.EventHandler(this.button11_Click);
+        	// 
+        	// tbFile
+        	// 
+        	resources.ApplyResources(this.tbFile, "tbFile");
+        	this.tbFile.Name = "tbFile";
+        	// 
+        	// bOpenfile
+        	// 
+        	resources.ApplyResources(this.bOpenfile, "bOpenfile");
+        	this.bOpenfile.Name = "bOpenfile";
+        	this.bOpenfile.Click += new System.EventHandler(this.bOpenfile_Click);
+        	// 
+        	// bStart
+        	// 
+        	resources.ApplyResources(this.bStart, "bStart");
+        	this.bStart.Name = "bStart";
+        	this.bStart.UseVisualStyleBackColor = true;
+        	this.bStart.Click += new System.EventHandler(this.bStar_Click);
+        	// 
+        	// bSendCmd
+        	// 
+        	resources.ApplyResources(this.bSendCmd, "bSendCmd");
+        	this.bSendCmd.Name = "bSendCmd";
+        	this.bSendCmd.UseVisualStyleBackColor = true;
+        	this.bSendCmd.Click += new System.EventHandler(this.bSendCmd_Click);
+        	// 
+        	// bHome
+        	// 
+        	resources.ApplyResources(this.bHome, "bHome");
+        	this.bHome.Name = "bHome";
+        	this.bHome.UseVisualStyleBackColor = false;
+        	this.bHome.Click += new System.EventHandler(this.bHome_Click);
+        	// 
+        	// tbStepSize
+        	// 
+        	resources.ApplyResources(this.tbStepSize, "tbStepSize");
+        	this.tbStepSize.Name = "tbStepSize";
+        	// 
+        	// pbFile
+        	// 
+        	resources.ApplyResources(this.pbFile, "pbFile");
+        	this.pbFile.Name = "pbFile";
+        	this.pbFile.Step = 1;
+        	this.pbFile.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+        	// 
+        	// pbBufer
+        	// 
+        	resources.ApplyResources(this.pbBufer, "pbBufer");
+        	this.pbBufer.BackColor = System.Drawing.SystemColors.Control;
+        	this.pbBufer.Name = "pbBufer";
+        	this.pbBufer.Step = 1;
+        	this.pbBufer.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+        	// 
+        	// label7
+        	// 
+        	resources.ApplyResources(this.label7, "label7");
+        	this.label7.Name = "label7";
+        	// 
+        	// btnCustom2
+        	// 
+        	resources.ApplyResources(this.btnCustom2, "btnCustom2");
+        	this.btnCustom2.Name = "btnCustom2";
+        	this.btnCustom2.UseVisualStyleBackColor = true;
+        	this.btnCustom2.Click += new System.EventHandler(this.btnCustom2_Click);
+        	// 
+        	// tbCustom1
+        	// 
+        	resources.ApplyResources(this.tbCustom1, "tbCustom1");
+        	this.tbCustom1.Name = "tbCustom1";
+        	this.tbCustom1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCustom1_KeyPress);
+        	// 
+        	// tbCustom2
+        	// 
+        	resources.ApplyResources(this.tbCustom2, "tbCustom2");
+        	this.tbCustom2.Name = "tbCustom2";
+        	this.tbCustom2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCustom2_KeyPress);
+        	// 
+        	// btnReset
+        	// 
+        	resources.ApplyResources(this.btnReset, "btnReset");
+        	this.btnReset.BackColor = System.Drawing.Color.Red;
+        	this.btnReset.ForeColor = System.Drawing.Color.Yellow;
+        	this.btnReset.Name = "btnReset";
+        	this.btnReset.UseVisualStyleBackColor = false;
+        	this.btnReset.Click += new System.EventHandler(this.button5_Click);
+        	// 
+        	// button12
+        	// 
+        	resources.ApplyResources(this.button12, "button12");
+        	this.button12.Name = "button12";
+        	this.button12.UseVisualStyleBackColor = false;
+        	this.button12.Click += new System.EventHandler(this.button12_Click);
+        	// 
+        	// button19
+        	// 
+        	resources.ApplyResources(this.button19, "button19");
+        	this.button19.Name = "button19";
+        	this.button19.UseVisualStyleBackColor = false;
+        	this.button19.Click += new System.EventHandler(this.button19_Click);
+        	// 
+        	// button20
+        	// 
+        	resources.ApplyResources(this.button20, "button20");
+        	this.button20.Name = "button20";
+        	this.button20.UseVisualStyleBackColor = false;
+        	this.button20.Click += new System.EventHandler(this.button20_Click);
+        	// 
+        	// button21
+        	// 
+        	resources.ApplyResources(this.button21, "button21");
+        	this.button21.Name = "button21";
+        	this.button21.UseVisualStyleBackColor = false;
+        	this.button21.Click += new System.EventHandler(this.button21_Click);
+        	// 
+        	// button22
+        	// 
+        	resources.ApplyResources(this.button22, "button22");
+        	this.button22.Name = "button22";
+        	this.button22.UseVisualStyleBackColor = false;
+        	this.button22.Click += new System.EventHandler(this.button22_Click);
+        	// 
+        	// gbJog
+        	// 
+        	resources.ApplyResources(this.gbJog, "gbJog");
+        	this.gbJog.BackColor = System.Drawing.SystemColors.Control;
+        	this.gbJog.Controls.Add(this.chkAbsolute);
+        	this.gbJog.Controls.Add(this.label9);
+        	this.gbJog.Controls.Add(this.label6);
+        	this.gbJog.Controls.Add(this.btnZdown);
+        	this.gbJog.Controls.Add(this.btnZup);
+        	this.gbJog.Controls.Add(this.button1);
+        	this.gbJog.Controls.Add(this.button22);
+        	this.gbJog.Controls.Add(this.button21);
+        	this.gbJog.Controls.Add(this.button20);
+        	this.gbJog.Controls.Add(this.button19);
+        	this.gbJog.Controls.Add(this.button12);
+        	this.gbJog.Controls.Add(this.tbStepSize);
+        	this.gbJog.Controls.Add(this.bYdown);
+        	this.gbJog.Controls.Add(this.bYup);
+        	this.gbJog.Controls.Add(this.bXup);
+        	this.gbJog.Controls.Add(this.bXdown);
+        	this.gbJog.Name = "gbJog";
+        	this.gbJog.TabStop = false;
+        	// 
+        	// chkAbsolute
+        	// 
+        	resources.ApplyResources(this.chkAbsolute, "chkAbsolute");
+        	this.chkAbsolute.Name = "chkAbsolute";
+        	this.chkAbsolute.UseVisualStyleBackColor = true;
+        	// 
+        	// label9
+        	// 
+        	resources.ApplyResources(this.label9, "label9");
+        	this.label9.Name = "label9";
+        	// 
+        	// label6
+        	// 
+        	resources.ApplyResources(this.label6, "label6");
+        	this.label6.Name = "label6";
+        	// 
+        	// btnZdown
+        	// 
+        	resources.ApplyResources(this.btnZdown, "btnZdown");
+        	this.btnZdown.BackColor = System.Drawing.SystemColors.Control;
+        	this.btnZdown.ForeColor = System.Drawing.SystemColors.HotTrack;
+        	this.btnZdown.Name = "btnZdown";
+        	this.btnZdown.UseVisualStyleBackColor = false;
+        	this.btnZdown.Click += new System.EventHandler(this.btnZdown_Click);
+        	// 
+        	// btnZup
+        	// 
+        	resources.ApplyResources(this.btnZup, "btnZup");
+        	this.btnZup.BackColor = System.Drawing.SystemColors.Control;
+        	this.btnZup.ForeColor = System.Drawing.SystemColors.HotTrack;
+        	this.btnZup.Name = "btnZup";
+        	this.btnZup.UseVisualStyleBackColor = false;
+        	this.btnZup.Click += new System.EventHandler(this.btnZup_Click);
+        	// 
+        	// button1
+        	// 
+        	resources.ApplyResources(this.button1, "button1");
+        	this.button1.Name = "button1";
+        	this.button1.UseVisualStyleBackColor = false;
+        	this.button1.Click += new System.EventHandler(this.button1_Click_1);
+        	// 
+        	// groupBox2
+        	// 
+        	resources.ApplyResources(this.groupBox2, "groupBox2");
+        	this.groupBox2.Controls.Add(this.lblRemaining);
+        	this.groupBox2.Controls.Add(this.lblBuf);
+        	this.groupBox2.Controls.Add(this.lblFileProgress);
+        	this.groupBox2.Controls.Add(this.label1);
+        	this.groupBox2.Controls.Add(this.pbFile);
+        	this.groupBox2.Controls.Add(this.bStart);
+        	this.groupBox2.Controls.Add(this.bOpenfile);
+        	this.groupBox2.Controls.Add(this.lblElapsed);
+        	this.groupBox2.Controls.Add(this.label8);
+        	this.groupBox2.Controls.Add(this.tbFile);
+        	this.groupBox2.Controls.Add(this.pbBufer);
+        	this.groupBox2.Controls.Add(this.label7);
+        	this.groupBox2.Name = "groupBox2";
+        	this.groupBox2.TabStop = false;
+        	// 
+        	// lblRemaining
+        	// 
+        	resources.ApplyResources(this.lblRemaining, "lblRemaining");
+        	this.lblRemaining.ForeColor = System.Drawing.Color.Red;
+        	this.lblRemaining.Name = "lblRemaining";
+        	// 
+        	// lblBuf
+        	// 
+        	resources.ApplyResources(this.lblBuf, "lblBuf");
+        	this.lblBuf.Name = "lblBuf";
+        	// 
+        	// lblFileProgress
+        	// 
+        	resources.ApplyResources(this.lblFileProgress, "lblFileProgress");
+        	this.lblFileProgress.BackColor = System.Drawing.Color.Transparent;
+        	this.lblFileProgress.Name = "lblFileProgress";
+        	// 
+        	// label1
+        	// 
+        	resources.ApplyResources(this.label1, "label1");
+        	this.label1.Name = "label1";
+        	// 
+        	// lblElapsed
+        	// 
+        	resources.ApplyResources(this.lblElapsed, "lblElapsed");
+        	this.lblElapsed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+        	this.lblElapsed.Name = "lblElapsed";
+        	// 
+        	// label8
+        	// 
+        	resources.ApplyResources(this.label8, "label8");
+        	this.label8.Name = "label8";
+        	// 
+        	// tbLaserPwr
+        	// 
+        	resources.ApplyResources(this.tbLaserPwr, "tbLaserPwr");
+        	this.tbLaserPwr.Name = "tbLaserPwr";
+        	this.tbLaserPwr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbLaserPwr_KeyPress);
+        	// 
+        	// openFileDialog1
+        	// 
+        	this.openFileDialog1.FileName = "openFileDialog1";
+        	resources.ApplyResources(this.openFileDialog1, "openFileDialog1");
+        	// 
+        	// tmrUpdates
+        	// 
+        	this.tmrUpdates.Enabled = true;
+        	this.tmrUpdates.Interval = 500;
+        	this.tmrUpdates.Tick += new System.EventHandler(this.tmrUpdates_Tick);
+        	// 
+        	// gbConecction
+        	// 
+        	resources.ApplyResources(this.gbConecction, "gbConecction");
+        	this.gbConecction.Controls.Add(this.label5);
+        	this.gbConecction.Controls.Add(this.label4);
+        	this.gbConecction.Controls.Add(this.bRefreshport);
+        	this.gbConecction.Controls.Add(this.cbBaud);
+        	this.gbConecction.Controls.Add(this.cbPort);
+        	this.gbConecction.Controls.Add(this.bOpenPort);
+        	this.gbConecction.Name = "gbConecction";
+        	this.gbConecction.TabStop = false;
+        	// 
+        	// label5
+        	// 
+        	resources.ApplyResources(this.label5, "label5");
+        	this.label5.Name = "label5";
+        	// 
+        	// label4
+        	// 
+        	resources.ApplyResources(this.label4, "label4");
+        	this.label4.Name = "label4";
+        	// 
+        	// bRefreshport
+        	// 
+        	resources.ApplyResources(this.bRefreshport, "bRefreshport");
+        	this.bRefreshport.BackgroundImage = global::_3dpBurner.Properties.Resources.refresh;
+        	this.bRefreshport.Name = "bRefreshport";
+        	this.bRefreshport.UseVisualStyleBackColor = true;
+        	this.bRefreshport.Click += new System.EventHandler(this.bRefreshport_Click);
+        	// 
+        	// gbLaserControl
+        	// 
+        	resources.ApplyResources(this.gbLaserControl, "gbLaserControl");
+        	this.gbLaserControl.Controls.Add(this.btnLaserPwr);
+        	this.gbLaserControl.Controls.Add(this.tbLaserPwr);
+        	this.gbLaserControl.Controls.Add(this.btsLaserOff);
+        	this.gbLaserControl.Controls.Add(this.btnLaserOn);
+        	this.gbLaserControl.Name = "gbLaserControl";
+        	this.gbLaserControl.TabStop = false;
+        	// 
+        	// btnLaserPwr
+        	// 
+        	resources.ApplyResources(this.btnLaserPwr, "btnLaserPwr");
+        	this.btnLaserPwr.Name = "btnLaserPwr";
+        	this.btnLaserPwr.UseVisualStyleBackColor = false;
+        	this.btnLaserPwr.Click += new System.EventHandler(this.btnLaserPwr_Click);
+        	// 
+        	// tbCommand
+        	// 
+        	resources.ApplyResources(this.tbCommand, "tbCommand");
+        	this.tbCommand.Name = "tbCommand";
+        	this.tbCommand.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCommand_KeyPress);
+        	// 
+        	// gbConsole
+        	// 
+        	resources.ApplyResources(this.gbConsole, "gbConsole");
+        	this.gbConsole.Controls.Add(this.btnCustom2);
+        	this.gbConsole.Controls.Add(this.label3);
+        	this.gbConsole.Controls.Add(this.btnCustom1);
+        	this.gbConsole.Controls.Add(this.label2);
+        	this.gbConsole.Controls.Add(this.tbCustom2);
+        	this.gbConsole.Controls.Add(this.panel1);
+        	this.gbConsole.Controls.Add(this.tbCustom1);
+        	this.gbConsole.Controls.Add(this.btlClearLog);
+        	this.gbConsole.Controls.Add(this.bSendCmd);
+        	this.gbConsole.Controls.Add(this.tbCommand);
+        	this.gbConsole.Name = "gbConsole";
+        	this.gbConsole.TabStop = false;
+        	// 
+        	// label3
+        	// 
+        	resources.ApplyResources(this.label3, "label3");
+        	this.label3.Name = "label3";
+        	// 
+        	// label2
+        	// 
+        	resources.ApplyResources(this.label2, "label2");
+        	this.label2.Name = "label2";
+        	// 
+        	// panel1
+        	// 
+        	resources.ApplyResources(this.panel1, "panel1");
+        	this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+        	this.panel1.Controls.Add(this.rtbLog);
+        	this.panel1.Name = "panel1";
+        	// 
+        	// rtbLog
+        	// 
+        	resources.ApplyResources(this.rtbLog, "rtbLog");
+        	this.rtbLog.BackColor = System.Drawing.SystemColors.Window;
+        	this.rtbLog.BorderStyle = System.Windows.Forms.BorderStyle.None;
+        	this.rtbLog.DetectUrls = false;
+        	this.rtbLog.Name = "rtbLog";
+        	this.rtbLog.ReadOnly = true;
+        	// 
+        	// btlClearLog
+        	// 
+        	resources.ApplyResources(this.btlClearLog, "btlClearLog");
+        	this.btlClearLog.Name = "btlClearLog";
+        	this.btlClearLog.UseVisualStyleBackColor = true;
+        	this.btlClearLog.Click += new System.EventHandler(this.btlClearLog_Click);
+        	// 
+        	// gbReference
+        	// 
+        	resources.ApplyResources(this.gbReference, "gbReference");
+        	this.gbReference.Controls.Add(this.btnZeroZ);
+        	this.gbReference.Controls.Add(this.btnZeroXY);
+        	this.gbReference.Controls.Add(this.btnZero);
+        	this.gbReference.Controls.Add(this.bHome);
+        	this.gbReference.Controls.Add(this.btnUnlock);
+        	this.gbReference.Controls.Add(this.btnReset);
+        	this.gbReference.Name = "gbReference";
+        	this.gbReference.TabStop = false;
+        	// 
+        	// btnZeroZ
+        	// 
+        	resources.ApplyResources(this.btnZeroZ, "btnZeroZ");
+        	this.btnZeroZ.Name = "btnZeroZ";
+        	this.btnZeroZ.UseVisualStyleBackColor = false;
+        	this.btnZeroZ.Click += new System.EventHandler(this.btnZeroZ_Click);
+        	// 
+        	// btnZeroXY
+        	// 
+        	resources.ApplyResources(this.btnZeroXY, "btnZeroXY");
+        	this.btnZeroXY.Name = "btnZeroXY";
+        	this.btnZeroXY.UseVisualStyleBackColor = false;
+        	this.btnZeroXY.Click += new System.EventHandler(this.btnZeroXY_Click);
+        	// 
+        	// btnZero
+        	// 
+        	resources.ApplyResources(this.btnZero, "btnZero");
+        	this.btnZero.Name = "btnZero";
+        	this.btnZero.UseVisualStyleBackColor = false;
+        	this.btnZero.Click += new System.EventHandler(this.btnZero_Click);
+        	// 
+        	// menuStrip1
+        	// 
+        	resources.ApplyResources(this.menuStrip1, "menuStrip1");
+        	this.menuStrip1.BackColor = System.Drawing.Color.LightGray;
+        	this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+        	        	        	this.fileToolStripMenuItem,
+        	        	        	this.modeToolStripMenuItem,
+        	        	        	this.settingsToolStripMenuItem,
+        	        	        	this.helpToolStripMenuItem});
+        	this.menuStrip1.Name = "menuStrip1";
+        	// 
+        	// fileToolStripMenuItem
+        	// 
+        	resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
+        	this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+        	        	        	this.openToolStripMenuItem,
+        	        	        	this.toolStripMenuItem1,
+        	        	        	this.exitToolStripMenuItem});
+        	this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+        	// 
+        	// openToolStripMenuItem
+        	// 
+        	resources.ApplyResources(this.openToolStripMenuItem, "openToolStripMenuItem");
+        	this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+        	this.openToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItemClick);
+        	// 
+        	// toolStripMenuItem1
+        	// 
+        	resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
+        	this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+        	// 
+        	// exitToolStripMenuItem
+        	// 
+        	resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
+        	this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+        	this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItemClick);
+        	// 
+        	// modeToolStripMenuItem
+        	// 
+        	resources.ApplyResources(this.modeToolStripMenuItem, "modeToolStripMenuItem");
+        	this.modeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+        	        	        	this.axisMillToolStripMenuItem,
+        	        	        	this.axisLaserPWRSToolStripMenuItem,
+        	        	        	this.axisLaserPWRZToolStripMenuItem,
+        	        	        	this.axisLaserToolStripMenuItem});
+        	this.modeToolStripMenuItem.Name = "modeToolStripMenuItem";
+        	// 
+        	// axisMillToolStripMenuItem
+        	// 
+        	resources.ApplyResources(this.axisMillToolStripMenuItem, "axisMillToolStripMenuItem");
+        	this.axisMillToolStripMenuItem.CheckOnClick = true;
+        	this.axisMillToolStripMenuItem.Name = "axisMillToolStripMenuItem";
+        	this.axisMillToolStripMenuItem.Click += new System.EventHandler(this.axisMillToolStripMenuItem_Click);
+        	// 
+        	// axisLaserPWRSToolStripMenuItem
+        	// 
+        	resources.ApplyResources(this.axisLaserPWRSToolStripMenuItem, "axisLaserPWRSToolStripMenuItem");
+        	this.axisLaserPWRSToolStripMenuItem.Checked = true;
+        	this.axisLaserPWRSToolStripMenuItem.CheckOnClick = true;
+        	this.axisLaserPWRSToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+        	this.axisLaserPWRSToolStripMenuItem.Name = "axisLaserPWRSToolStripMenuItem";
+        	this.axisLaserPWRSToolStripMenuItem.Click += new System.EventHandler(this.axisLaserPWRSToolStripMenuItem_Click);
+        	// 
+        	// axisLaserPWRZToolStripMenuItem
+        	// 
+        	resources.ApplyResources(this.axisLaserPWRZToolStripMenuItem, "axisLaserPWRZToolStripMenuItem");
+        	this.axisLaserPWRZToolStripMenuItem.CheckOnClick = true;
+        	this.axisLaserPWRZToolStripMenuItem.Name = "axisLaserPWRZToolStripMenuItem";
+        	this.axisLaserPWRZToolStripMenuItem.Click += new System.EventHandler(this.axisLaserPWRZToolStripMenuItem_Click);
+        	// 
+        	// axisLaserToolStripMenuItem
+        	// 
+        	resources.ApplyResources(this.axisLaserToolStripMenuItem, "axisLaserToolStripMenuItem");
+        	this.axisLaserToolStripMenuItem.CheckOnClick = true;
+        	this.axisLaserToolStripMenuItem.Name = "axisLaserToolStripMenuItem";
+        	this.axisLaserToolStripMenuItem.Click += new System.EventHandler(this.axisLaserToolStripMenuItem_Click);
+        	// 
+        	// settingsToolStripMenuItem
+        	// 
+        	resources.ApplyResources(this.settingsToolStripMenuItem, "settingsToolStripMenuItem");
+        	this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+        	        	        	this.restoreSettingsToolStripMenuItem});
+        	this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+        	// 
+        	// restoreSettingsToolStripMenuItem
+        	// 
+        	resources.ApplyResources(this.restoreSettingsToolStripMenuItem, "restoreSettingsToolStripMenuItem");
+        	this.restoreSettingsToolStripMenuItem.Name = "restoreSettingsToolStripMenuItem";
+        	this.restoreSettingsToolStripMenuItem.Click += new System.EventHandler(this.restoreSettingsToolStripMenuItem_Click);
+        	// 
+        	// helpToolStripMenuItem
+        	// 
+        	resources.ApplyResources(this.helpToolStripMenuItem, "helpToolStripMenuItem");
+        	this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+        	        	        	this.aboutToolStripMenuItem});
+        	this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+        	// 
+        	// aboutToolStripMenuItem
+        	// 
+        	resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
+        	this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+        	this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+        	// 
+        	// statusStrip1
+        	// 
+        	resources.ApplyResources(this.statusStrip1, "statusStrip1");
+        	this.statusStrip1.BackColor = System.Drawing.SystemColors.Control;
+        	this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+        	        	        	this.toolStripStatusLabel2,
+        	        	        	this.toolStripStatusLabel1,
+        	        	        	this.lblStatus,
+        	        	        	this.toolStripStatusLabel3,
+        	        	        	this.lblWPos,
+        	        	        	this.lblWPosX,
+        	        	        	this.lblWPosY,
+        	        	        	this.lblWPosZ,
+        	        	        	this.toolStripStatusLabel8,
+        	        	        	this.lblMPosX,
+        	        	        	this.lblMPosY,
+        	        	        	this.lblMPosZ});
+        	this.statusStrip1.Name = "statusStrip1";
+        	this.statusStrip1.ShowItemToolTips = true;
+        	this.statusStrip1.SizingGrip = false;
+        	// 
+        	// toolStripStatusLabel2
+        	// 
+        	resources.ApplyResources(this.toolStripStatusLabel2, "toolStripStatusLabel2");
+        	this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+        	// 
+        	// toolStripStatusLabel1
+        	// 
+        	resources.ApplyResources(this.toolStripStatusLabel1, "toolStripStatusLabel1");
+        	this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+        	// 
+        	// lblStatus
+        	// 
+        	resources.ApplyResources(this.lblStatus, "lblStatus");
+        	this.lblStatus.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+        	this.lblStatus.Name = "lblStatus";
+        	// 
+        	// toolStripStatusLabel3
+        	// 
+        	resources.ApplyResources(this.toolStripStatusLabel3, "toolStripStatusLabel3");
+        	this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
+        	// 
+        	// lblWPos
+        	// 
+        	resources.ApplyResources(this.lblWPos, "lblWPos");
+        	this.lblWPos.AutoToolTip = true;
+        	this.lblWPos.Name = "lblWPos";
+        	this.lblWPos.Padding = new System.Windows.Forms.Padding(24, 0, 0, 0);
+        	// 
+        	// lblWPosX
+        	// 
+        	resources.ApplyResources(this.lblWPosX, "lblWPosX");
+        	this.lblWPosX.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
+        	        	        	| System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
+        	        	        	| System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+        	this.lblWPosX.Name = "lblWPosX";
+        	// 
+        	// lblWPosY
+        	// 
+        	resources.ApplyResources(this.lblWPosY, "lblWPosY");
+        	this.lblWPosY.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
+        	        	        	| System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
+        	        	        	| System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+        	this.lblWPosY.Name = "lblWPosY";
+        	// 
+        	// lblWPosZ
+        	// 
+        	resources.ApplyResources(this.lblWPosZ, "lblWPosZ");
+        	this.lblWPosZ.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
+        	        	        	| System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
+        	        	        	| System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+        	this.lblWPosZ.Name = "lblWPosZ";
+        	// 
+        	// toolStripStatusLabel8
+        	// 
+        	resources.ApplyResources(this.toolStripStatusLabel8, "toolStripStatusLabel8");
+        	this.toolStripStatusLabel8.AutoToolTip = true;
+        	this.toolStripStatusLabel8.Name = "toolStripStatusLabel8";
+        	this.toolStripStatusLabel8.Padding = new System.Windows.Forms.Padding(24, 0, 0, 0);
+        	// 
+        	// lblMPosX
+        	// 
+        	resources.ApplyResources(this.lblMPosX, "lblMPosX");
+        	this.lblMPosX.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
+        	        	        	| System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
+        	        	        	| System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+        	this.lblMPosX.Name = "lblMPosX";
+        	// 
+        	// lblMPosY
+        	// 
+        	resources.ApplyResources(this.lblMPosY, "lblMPosY");
+        	this.lblMPosY.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
+        	        	        	| System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
+        	        	        	| System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+        	this.lblMPosY.Name = "lblMPosY";
+        	// 
+        	// lblMPosZ
+        	// 
+        	resources.ApplyResources(this.lblMPosZ, "lblMPosZ");
+        	this.lblMPosZ.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
+        	        	        	| System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
+        	        	        	| System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+        	this.lblMPosZ.Name = "lblMPosZ";
+        	// 
+        	// frm3dpBurner
+        	// 
+        	resources.ApplyResources(this, "$this");
+        	this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+        	this.BackColor = System.Drawing.SystemColors.Control;
+        	this.Controls.Add(this.statusStrip1);
+        	this.Controls.Add(this.gbLaserControl);
+        	this.Controls.Add(this.gbReference);
+        	this.Controls.Add(this.gbConsole);
+        	this.Controls.Add(this.gbConecction);
+        	this.Controls.Add(this.groupBox2);
+        	this.Controls.Add(this.gbJog);
+        	this.Controls.Add(this.menuStrip1);
+        	this.DoubleBuffered = true;
+        	this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+        	this.MainMenuStrip = this.menuStrip1;
+        	this.MaximizeBox = false;
+        	this.Name = "frm3dpBurner";
+        	this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm3dpBurner_FormClosing);
+        	this.Load += new System.EventHandler(this.Form1_Load);
+        	this.gbJog.ResumeLayout(false);
+        	this.gbJog.PerformLayout();
+        	this.groupBox2.ResumeLayout(false);
+        	this.groupBox2.PerformLayout();
+        	this.gbConecction.ResumeLayout(false);
+        	this.gbConecction.PerformLayout();
+        	this.gbLaserControl.ResumeLayout(false);
+        	this.gbLaserControl.PerformLayout();
+        	this.gbConsole.ResumeLayout(false);
+        	this.gbConsole.PerformLayout();
+        	this.panel1.ResumeLayout(false);
+        	this.gbReference.ResumeLayout(false);
+        	this.menuStrip1.ResumeLayout(false);
+        	this.menuStrip1.PerformLayout();
+        	this.statusStrip1.ResumeLayout(false);
+        	this.statusStrip1.PerformLayout();
+        	this.ResumeLayout(false);
+        	this.PerformLayout();
         }
-
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
+        private System.Windows.Forms.CheckBox chkAbsolute;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label6;
+                      
         #endregion
-
+        
+        private System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.Button bOpenPort;
         private System.Windows.Forms.ComboBox cbPort;
         private System.Windows.Forms.ComboBox cbBaud;
-        private System.IO.Ports.SerialPort serialPort1;
-        private System.Windows.Forms.Button bXdown;
-        private System.Windows.Forms.Button bXup;
+		private System.Windows.Forms.Button bXup;
         private System.Windows.Forms.Button bYup;
+        private System.Windows.Forms.Button bXdown;
         private System.Windows.Forms.Button bYdown;
         private System.Windows.Forms.Button btnLaserOn;
         private System.Windows.Forms.Button btsLaserOff;
@@ -984,7 +932,6 @@ namespace _3dpBurner
         private System.Windows.Forms.TextBox tbCommand;
         private System.Windows.Forms.GroupBox gbConsole;
         private System.Windows.Forms.GroupBox gbReference;
-        private System.Windows.Forms.GroupBox gbCustom;
         private System.Windows.Forms.Button btnLaserPwr;
         private System.Windows.Forms.Button btlClearLog;
         private System.Windows.Forms.Button btnZero;
@@ -992,15 +939,15 @@ namespace _3dpBurner
         private System.Windows.Forms.RichTextBox rtbLog;
         private System.Windows.Forms.Label lblBuf;
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.Button btnZdown;
+        private System.Windows.Forms.Button btnZup;
+        private System.Windows.Forms.Button btnZeroZ;
+        private System.Windows.Forms.Button btnZeroXY;
         private System.Windows.Forms.ToolStripMenuItem modeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem axisMillToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem axisLaserPWRSToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem axisLaserPWRZToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem axisLaserToolStripMenuItem;
-        private System.Windows.Forms.Button btnZdown;
-        private System.Windows.Forms.Button btnZup;
-        private System.Windows.Forms.Button btnZeroZ;
-        private System.Windows.Forms.Button btnZeroXY;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem restoreSettingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
@@ -1010,6 +957,21 @@ namespace _3dpBurner
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.Label lblRemaining;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ToolStripStatusLabel lblStatus;
+        private System.Windows.Forms.ToolStripStatusLabel lblWPos;
+        private System.Windows.Forms.ToolStripStatusLabel lblWPosX;
+        private System.Windows.Forms.ToolStripStatusLabel lblWPosY;
+        private System.Windows.Forms.ToolStripStatusLabel lblWPosZ;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel8;
+        private System.Windows.Forms.ToolStripStatusLabel lblMPosX;
+        private System.Windows.Forms.ToolStripStatusLabel lblMPosY;
+        private System.Windows.Forms.ToolStripStatusLabel lblMPosZ;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }
-

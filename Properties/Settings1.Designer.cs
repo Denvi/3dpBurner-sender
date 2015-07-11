@@ -9,114 +9,126 @@
 //------------------------------------------------------------------------------
 
 namespace _3dpBurner.Properties {
-    
-    
-    [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "12.0.0.0")]
-    internal sealed partial class Settings1 : global::System.Configuration.ApplicationSettingsBase {
-        
-        private static Settings1 defaultInstance = ((Settings1)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings1())));
-        
-        public static Settings1 Default {
-            get {
-                return defaultInstance;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("COM1")]
-        public string port {
-            get {
-                return ((string)(this["port"]));
-            }
-            set {
-                this["port"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("115200")]
-        public string baud {
-            get {
-                return ((string)(this["baud"]));
-            }
-            set {
-                this["baud"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string file {
-            get {
-                return ((string)(this["file"]));
-            }
-            set {
-                this["file"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public string step {
-            get {
-                return ((string)(this["step"]));
-            }
-            set {
-                this["step"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public string pwr {
-            get {
-                return ((string)(this["pwr"]));
-            }
-            set {
-                this["pwr"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("G0 X0 Y0")]
-        public string custom1 {
-            get {
-                return ((string)(this["custom1"]));
-            }
-            set {
-                this["custom1"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("G0 X10 Y10")]
-        public string custom2 {
-            get {
-                return ((string)(this["custom2"]));
-            }
-            set {
-                this["custom2"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("2axisLasePWR_S")]
-        public string mode {
-            get {
-                return ((string)(this["mode"]));
-            }
-            set {
-                this["mode"] = value;
-            }
-        }
-    }
+	
+	
+	[global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("ICSharpCode.SettingsEditor.SettingsCodeGeneratorTool", "4.4.2.9749")]
+	internal sealed partial class Settings1 : global::System.Configuration.ApplicationSettingsBase {
+		
+		private static Settings1 defaultInstance = ((Settings1)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings1())));
+		
+		public static Settings1 Default {
+			get {
+				return defaultInstance;
+			}
+		}
+		
+		[global::System.Configuration.UserScopedSettingAttribute()]
+		[global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+		[global::System.Configuration.DefaultSettingValueAttribute("False")]
+		public bool absolute {
+			get {
+				return ((bool)(this["absolute"]));
+			}
+			set {
+				this["absolute"] = value;
+			}
+		}
+		
+		[global::System.Configuration.UserScopedSettingAttribute()]
+		[global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+		[global::System.Configuration.DefaultSettingValueAttribute("115200")]
+		public string baud {
+			get {
+				return ((string)(this["baud"]));
+			}
+			set {
+				this["baud"] = value;
+			}
+		}
+		
+		[global::System.Configuration.UserScopedSettingAttribute()]
+		[global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+		[global::System.Configuration.DefaultSettingValueAttribute("G0 X0 Y0")]
+		public string custom1 {
+			get {
+				return ((string)(this["custom1"]));
+			}
+			set {
+				this["custom1"] = value;
+			}
+		}
+		
+		[global::System.Configuration.UserScopedSettingAttribute()]
+		[global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+		[global::System.Configuration.DefaultSettingValueAttribute("G0 X10 Y10")]
+		public string custom2 {
+			get {
+				return ((string)(this["custom2"]));
+			}
+			set {
+				this["custom2"] = value;
+			}
+		}
+		
+		[global::System.Configuration.UserScopedSettingAttribute()]
+		[global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+		[global::System.Configuration.DefaultSettingValueAttribute("")]
+		public string file {
+			get {
+				return ((string)(this["file"]));
+			}
+			set {
+				this["file"] = value;
+			}
+		}
+		
+		[global::System.Configuration.UserScopedSettingAttribute()]
+		[global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+		[global::System.Configuration.DefaultSettingValueAttribute("2axisLasePWR_S")]
+		public string mode {
+			get {
+				return ((string)(this["mode"]));
+			}
+			set {
+				this["mode"] = value;
+			}
+		}
+		
+		[global::System.Configuration.UserScopedSettingAttribute()]
+		[global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+		[global::System.Configuration.DefaultSettingValueAttribute("COM1")]
+		public string port {
+			get {
+				return ((string)(this["port"]));
+			}
+			set {
+				this["port"] = value;
+			}
+		}
+		
+		[global::System.Configuration.UserScopedSettingAttribute()]
+		[global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+		[global::System.Configuration.DefaultSettingValueAttribute("0")]
+		public string pwr {
+			get {
+				return ((string)(this["pwr"]));
+			}
+			set {
+				this["pwr"] = value;
+			}
+		}
+		
+		[global::System.Configuration.UserScopedSettingAttribute()]
+		[global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+		[global::System.Configuration.DefaultSettingValueAttribute("1")]
+		public string step {
+			get {
+				return ((string)(this["step"]));
+			}
+			set {
+				this["step"] = value;
+			}
+		}
+	}
 }

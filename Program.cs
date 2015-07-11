@@ -23,6 +23,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace _3dpBurner
 {
@@ -35,7 +36,8 @@ namespace _3dpBurner
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            Application.SetCompatibleTextRenderingDefault(false);            
+//            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en-US"); 
             Application.Run(new frm3dpBurner());
         }
     }
