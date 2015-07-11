@@ -187,32 +187,32 @@ namespace _3dpBurner
         	// 
         	// bXdown
         	// 
-        	resources.ApplyResources(this.bXdown, "bXdown");
         	this.bXdown.BackColor = System.Drawing.SystemColors.ActiveCaption;
+        	resources.ApplyResources(this.bXdown, "bXdown");
         	this.bXdown.Name = "bXdown";
         	this.bXdown.UseVisualStyleBackColor = false;
         	this.bXdown.Click += new System.EventHandler(this.bXdown_Click);
         	// 
         	// bXup
         	// 
-        	resources.ApplyResources(this.bXup, "bXup");
         	this.bXup.BackColor = System.Drawing.SystemColors.ActiveCaption;
+        	resources.ApplyResources(this.bXup, "bXup");
         	this.bXup.Name = "bXup";
         	this.bXup.UseVisualStyleBackColor = false;
         	this.bXup.Click += new System.EventHandler(this.bXup_Click);
         	// 
         	// bYup
         	// 
-        	resources.ApplyResources(this.bYup, "bYup");
         	this.bYup.BackColor = System.Drawing.SystemColors.ActiveCaption;
+        	resources.ApplyResources(this.bYup, "bYup");
         	this.bYup.Name = "bYup";
         	this.bYup.UseVisualStyleBackColor = false;
         	this.bYup.Click += new System.EventHandler(this.bYup_Click);
         	// 
         	// bYdown
         	// 
-        	resources.ApplyResources(this.bYdown, "bYdown");
         	this.bYdown.BackColor = System.Drawing.SystemColors.ActiveCaption;
+        	resources.ApplyResources(this.bYdown, "bYdown");
         	this.bYdown.ForeColor = System.Drawing.SystemColors.ControlText;
         	this.bYdown.Name = "bYdown";
         	this.bYdown.UseVisualStyleBackColor = false;
@@ -292,8 +292,8 @@ namespace _3dpBurner
         	// 
         	// pbBufer
         	// 
-        	resources.ApplyResources(this.pbBufer, "pbBufer");
         	this.pbBufer.BackColor = System.Drawing.SystemColors.Control;
+        	resources.ApplyResources(this.pbBufer, "pbBufer");
         	this.pbBufer.Name = "pbBufer";
         	this.pbBufer.Step = 1;
         	this.pbBufer.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
@@ -324,9 +324,9 @@ namespace _3dpBurner
         	// 
         	// btnReset
         	// 
-        	resources.ApplyResources(this.btnReset, "btnReset");
         	this.btnReset.BackColor = System.Drawing.Color.Red;
         	this.btnReset.ForeColor = System.Drawing.Color.Yellow;
+        	resources.ApplyResources(this.btnReset, "btnReset");
         	this.btnReset.Name = "btnReset";
         	this.btnReset.UseVisualStyleBackColor = false;
         	this.btnReset.Click += new System.EventHandler(this.button5_Click);
@@ -368,8 +368,8 @@ namespace _3dpBurner
         	// 
         	// gbJog
         	// 
-        	resources.ApplyResources(this.gbJog, "gbJog");
         	this.gbJog.BackColor = System.Drawing.SystemColors.Control;
+        	resources.ApplyResources(this.gbJog, "gbJog");
         	this.gbJog.Controls.Add(this.chkAbsolute);
         	this.gbJog.Controls.Add(this.label9);
         	this.gbJog.Controls.Add(this.label6);
@@ -407,8 +407,8 @@ namespace _3dpBurner
         	// 
         	// btnZdown
         	// 
-        	resources.ApplyResources(this.btnZdown, "btnZdown");
         	this.btnZdown.BackColor = System.Drawing.SystemColors.Control;
+        	resources.ApplyResources(this.btnZdown, "btnZdown");
         	this.btnZdown.ForeColor = System.Drawing.SystemColors.HotTrack;
         	this.btnZdown.Name = "btnZdown";
         	this.btnZdown.UseVisualStyleBackColor = false;
@@ -416,8 +416,8 @@ namespace _3dpBurner
         	// 
         	// btnZup
         	// 
-        	resources.ApplyResources(this.btnZup, "btnZup");
         	this.btnZup.BackColor = System.Drawing.SystemColors.Control;
+        	resources.ApplyResources(this.btnZup, "btnZup");
         	this.btnZup.ForeColor = System.Drawing.SystemColors.HotTrack;
         	this.btnZup.Name = "btnZup";
         	this.btnZup.UseVisualStyleBackColor = false;
@@ -432,7 +432,6 @@ namespace _3dpBurner
         	// 
         	// groupBox2
         	// 
-        	resources.ApplyResources(this.groupBox2, "groupBox2");
         	this.groupBox2.Controls.Add(this.lblRemaining);
         	this.groupBox2.Controls.Add(this.lblBuf);
         	this.groupBox2.Controls.Add(this.lblFileProgress);
@@ -445,6 +444,7 @@ namespace _3dpBurner
         	this.groupBox2.Controls.Add(this.tbFile);
         	this.groupBox2.Controls.Add(this.pbBufer);
         	this.groupBox2.Controls.Add(this.label7);
+        	resources.ApplyResources(this.groupBox2, "groupBox2");
         	this.groupBox2.Name = "groupBox2";
         	this.groupBox2.TabStop = false;
         	// 
@@ -500,13 +500,13 @@ namespace _3dpBurner
         	// 
         	// gbConecction
         	// 
-        	resources.ApplyResources(this.gbConecction, "gbConecction");
         	this.gbConecction.Controls.Add(this.label5);
         	this.gbConecction.Controls.Add(this.label4);
         	this.gbConecction.Controls.Add(this.bRefreshport);
         	this.gbConecction.Controls.Add(this.cbBaud);
         	this.gbConecction.Controls.Add(this.cbPort);
         	this.gbConecction.Controls.Add(this.bOpenPort);
+        	resources.ApplyResources(this.gbConecction, "gbConecction");
         	this.gbConecction.Name = "gbConecction";
         	this.gbConecction.TabStop = false;
         	// 
@@ -522,19 +522,19 @@ namespace _3dpBurner
         	// 
         	// bRefreshport
         	// 
-        	resources.ApplyResources(this.bRefreshport, "bRefreshport");
         	this.bRefreshport.BackgroundImage = global::_3dpBurner.Properties.Resources.refresh;
+        	resources.ApplyResources(this.bRefreshport, "bRefreshport");
         	this.bRefreshport.Name = "bRefreshport";
         	this.bRefreshport.UseVisualStyleBackColor = true;
         	this.bRefreshport.Click += new System.EventHandler(this.bRefreshport_Click);
         	// 
         	// gbLaserControl
         	// 
-        	resources.ApplyResources(this.gbLaserControl, "gbLaserControl");
         	this.gbLaserControl.Controls.Add(this.btnLaserPwr);
         	this.gbLaserControl.Controls.Add(this.tbLaserPwr);
         	this.gbLaserControl.Controls.Add(this.btsLaserOff);
         	this.gbLaserControl.Controls.Add(this.btnLaserOn);
+        	resources.ApplyResources(this.gbLaserControl, "gbLaserControl");
         	this.gbLaserControl.Name = "gbLaserControl";
         	this.gbLaserControl.TabStop = false;
         	// 
@@ -553,7 +553,6 @@ namespace _3dpBurner
         	// 
         	// gbConsole
         	// 
-        	resources.ApplyResources(this.gbConsole, "gbConsole");
         	this.gbConsole.Controls.Add(this.btnCustom2);
         	this.gbConsole.Controls.Add(this.label3);
         	this.gbConsole.Controls.Add(this.btnCustom1);
@@ -564,6 +563,7 @@ namespace _3dpBurner
         	this.gbConsole.Controls.Add(this.btlClearLog);
         	this.gbConsole.Controls.Add(this.bSendCmd);
         	this.gbConsole.Controls.Add(this.tbCommand);
+        	resources.ApplyResources(this.gbConsole, "gbConsole");
         	this.gbConsole.Name = "gbConsole";
         	this.gbConsole.TabStop = false;
         	// 
@@ -586,10 +586,10 @@ namespace _3dpBurner
         	// 
         	// rtbLog
         	// 
-        	resources.ApplyResources(this.rtbLog, "rtbLog");
         	this.rtbLog.BackColor = System.Drawing.SystemColors.Window;
         	this.rtbLog.BorderStyle = System.Windows.Forms.BorderStyle.None;
         	this.rtbLog.DetectUrls = false;
+        	resources.ApplyResources(this.rtbLog, "rtbLog");
         	this.rtbLog.Name = "rtbLog";
         	this.rtbLog.ReadOnly = true;
         	// 
@@ -602,13 +602,13 @@ namespace _3dpBurner
         	// 
         	// gbReference
         	// 
-        	resources.ApplyResources(this.gbReference, "gbReference");
         	this.gbReference.Controls.Add(this.btnZeroZ);
         	this.gbReference.Controls.Add(this.btnZeroXY);
         	this.gbReference.Controls.Add(this.btnZero);
         	this.gbReference.Controls.Add(this.bHome);
         	this.gbReference.Controls.Add(this.btnUnlock);
         	this.gbReference.Controls.Add(this.btnReset);
+        	resources.ApplyResources(this.gbReference, "gbReference");
         	this.gbReference.Name = "gbReference";
         	this.gbReference.TabStop = false;
         	// 
@@ -635,105 +635,105 @@ namespace _3dpBurner
         	// 
         	// menuStrip1
         	// 
-        	resources.ApplyResources(this.menuStrip1, "menuStrip1");
         	this.menuStrip1.BackColor = System.Drawing.Color.LightGray;
         	this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
         	        	        	this.fileToolStripMenuItem,
         	        	        	this.modeToolStripMenuItem,
         	        	        	this.settingsToolStripMenuItem,
         	        	        	this.helpToolStripMenuItem});
+        	resources.ApplyResources(this.menuStrip1, "menuStrip1");
         	this.menuStrip1.Name = "menuStrip1";
         	// 
         	// fileToolStripMenuItem
         	// 
-        	resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
         	this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
         	        	        	this.openToolStripMenuItem,
         	        	        	this.toolStripMenuItem1,
         	        	        	this.exitToolStripMenuItem});
         	this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+        	resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
         	// 
         	// openToolStripMenuItem
         	// 
-        	resources.ApplyResources(this.openToolStripMenuItem, "openToolStripMenuItem");
         	this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+        	resources.ApplyResources(this.openToolStripMenuItem, "openToolStripMenuItem");
         	this.openToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItemClick);
         	// 
         	// toolStripMenuItem1
         	// 
-        	resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
         	this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+        	resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
         	// 
         	// exitToolStripMenuItem
         	// 
-        	resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
         	this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+        	resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
         	this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItemClick);
         	// 
         	// modeToolStripMenuItem
         	// 
-        	resources.ApplyResources(this.modeToolStripMenuItem, "modeToolStripMenuItem");
         	this.modeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
         	        	        	this.axisMillToolStripMenuItem,
         	        	        	this.axisLaserPWRSToolStripMenuItem,
         	        	        	this.axisLaserPWRZToolStripMenuItem,
         	        	        	this.axisLaserToolStripMenuItem});
         	this.modeToolStripMenuItem.Name = "modeToolStripMenuItem";
+        	resources.ApplyResources(this.modeToolStripMenuItem, "modeToolStripMenuItem");
         	// 
         	// axisMillToolStripMenuItem
         	// 
-        	resources.ApplyResources(this.axisMillToolStripMenuItem, "axisMillToolStripMenuItem");
         	this.axisMillToolStripMenuItem.CheckOnClick = true;
         	this.axisMillToolStripMenuItem.Name = "axisMillToolStripMenuItem";
+        	resources.ApplyResources(this.axisMillToolStripMenuItem, "axisMillToolStripMenuItem");
         	this.axisMillToolStripMenuItem.Click += new System.EventHandler(this.axisMillToolStripMenuItem_Click);
         	// 
         	// axisLaserPWRSToolStripMenuItem
         	// 
-        	resources.ApplyResources(this.axisLaserPWRSToolStripMenuItem, "axisLaserPWRSToolStripMenuItem");
         	this.axisLaserPWRSToolStripMenuItem.Checked = true;
         	this.axisLaserPWRSToolStripMenuItem.CheckOnClick = true;
         	this.axisLaserPWRSToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
         	this.axisLaserPWRSToolStripMenuItem.Name = "axisLaserPWRSToolStripMenuItem";
+        	resources.ApplyResources(this.axisLaserPWRSToolStripMenuItem, "axisLaserPWRSToolStripMenuItem");
         	this.axisLaserPWRSToolStripMenuItem.Click += new System.EventHandler(this.axisLaserPWRSToolStripMenuItem_Click);
         	// 
         	// axisLaserPWRZToolStripMenuItem
         	// 
-        	resources.ApplyResources(this.axisLaserPWRZToolStripMenuItem, "axisLaserPWRZToolStripMenuItem");
         	this.axisLaserPWRZToolStripMenuItem.CheckOnClick = true;
         	this.axisLaserPWRZToolStripMenuItem.Name = "axisLaserPWRZToolStripMenuItem";
+        	resources.ApplyResources(this.axisLaserPWRZToolStripMenuItem, "axisLaserPWRZToolStripMenuItem");
         	this.axisLaserPWRZToolStripMenuItem.Click += new System.EventHandler(this.axisLaserPWRZToolStripMenuItem_Click);
         	// 
         	// axisLaserToolStripMenuItem
         	// 
-        	resources.ApplyResources(this.axisLaserToolStripMenuItem, "axisLaserToolStripMenuItem");
         	this.axisLaserToolStripMenuItem.CheckOnClick = true;
         	this.axisLaserToolStripMenuItem.Name = "axisLaserToolStripMenuItem";
+        	resources.ApplyResources(this.axisLaserToolStripMenuItem, "axisLaserToolStripMenuItem");
         	this.axisLaserToolStripMenuItem.Click += new System.EventHandler(this.axisLaserToolStripMenuItem_Click);
         	// 
         	// settingsToolStripMenuItem
         	// 
-        	resources.ApplyResources(this.settingsToolStripMenuItem, "settingsToolStripMenuItem");
         	this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
         	        	        	this.restoreSettingsToolStripMenuItem});
         	this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+        	resources.ApplyResources(this.settingsToolStripMenuItem, "settingsToolStripMenuItem");
         	// 
         	// restoreSettingsToolStripMenuItem
         	// 
-        	resources.ApplyResources(this.restoreSettingsToolStripMenuItem, "restoreSettingsToolStripMenuItem");
         	this.restoreSettingsToolStripMenuItem.Name = "restoreSettingsToolStripMenuItem";
+        	resources.ApplyResources(this.restoreSettingsToolStripMenuItem, "restoreSettingsToolStripMenuItem");
         	this.restoreSettingsToolStripMenuItem.Click += new System.EventHandler(this.restoreSettingsToolStripMenuItem_Click);
         	// 
         	// helpToolStripMenuItem
         	// 
-        	resources.ApplyResources(this.helpToolStripMenuItem, "helpToolStripMenuItem");
         	this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
         	        	        	this.aboutToolStripMenuItem});
         	this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+        	resources.ApplyResources(this.helpToolStripMenuItem, "helpToolStripMenuItem");
         	// 
         	// aboutToolStripMenuItem
         	// 
-        	resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
         	this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+        	resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
         	this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
         	// 
         	// statusStrip1
@@ -759,13 +759,13 @@ namespace _3dpBurner
         	// 
         	// toolStripStatusLabel2
         	// 
-        	resources.ApplyResources(this.toolStripStatusLabel2, "toolStripStatusLabel2");
         	this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+        	resources.ApplyResources(this.toolStripStatusLabel2, "toolStripStatusLabel2");
         	// 
         	// toolStripStatusLabel1
         	// 
-        	resources.ApplyResources(this.toolStripStatusLabel1, "toolStripStatusLabel1");
         	this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+        	resources.ApplyResources(this.toolStripStatusLabel1, "toolStripStatusLabel1");
         	// 
         	// lblStatus
         	// 
@@ -780,10 +780,10 @@ namespace _3dpBurner
         	// 
         	// lblWPos
         	// 
-        	resources.ApplyResources(this.lblWPos, "lblWPos");
         	this.lblWPos.AutoToolTip = true;
         	this.lblWPos.Name = "lblWPos";
         	this.lblWPos.Padding = new System.Windows.Forms.Padding(24, 0, 0, 0);
+        	resources.ApplyResources(this.lblWPos, "lblWPos");
         	// 
         	// lblWPosX
         	// 
@@ -811,10 +811,10 @@ namespace _3dpBurner
         	// 
         	// toolStripStatusLabel8
         	// 
-        	resources.ApplyResources(this.toolStripStatusLabel8, "toolStripStatusLabel8");
         	this.toolStripStatusLabel8.AutoToolTip = true;
         	this.toolStripStatusLabel8.Name = "toolStripStatusLabel8";
         	this.toolStripStatusLabel8.Padding = new System.Windows.Forms.Padding(24, 0, 0, 0);
+        	resources.ApplyResources(this.toolStripStatusLabel8, "toolStripStatusLabel8");
         	// 
         	// lblMPosX
         	// 

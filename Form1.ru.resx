@@ -134,7 +134,7 @@
     <value>Выкл</value>
   </data>
   <data name="btnCustom1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>354, 250</value>
+    <value>352, 250</value>
   </data>
   <data name="btnCustom1.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 28</value>
@@ -156,7 +156,7 @@
     <value>Пуск</value>
   </data>
   <data name="bSendCmd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>354, 218</value>
+    <value>352, 218</value>
   </data>
   <data name="bSendCmd.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 28</value>
@@ -177,7 +177,7 @@
     <value>Буфер:</value>
   </data>
   <data name="btnCustom2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>354, 281</value>
+    <value>352, 281</value>
   </data>
   <data name="btnCustom2.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 28</value>
@@ -186,13 +186,16 @@
     <value>Отправить</value>
   </data>
   <data name="tbCustom1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>242, 26</value>
+    <value>240, 26</value>
   </data>
   <data name="tbCustom2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>241, 26</value>
+    <value>239, 26</value>
   </data>
   <data name="btnReset.Text" xml:space="preserve">
     <value>Сброс</value>
+  </data>
+  <data name="gbJog.Text" xml:space="preserve">
+    <value>Перемещение</value>
   </data>
   <data name="chkAbsolute.Text" xml:space="preserve">
     <value>G90 после перемещения</value>
@@ -212,8 +215,8 @@
   <data name="label6.Text" xml:space="preserve">
     <value>Шаг:</value>
   </data>
-  <data name="gbJog.Text" xml:space="preserve">
-    <value>Перемещение</value>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Файл</value>
   </data>
   <data name="lblFileProgress.Size" type="System.Drawing.Size, System.Drawing">
     <value>91, 17</value>
@@ -236,8 +239,8 @@
   <data name="label8.Text" xml:space="preserve">
     <value>Прошло:</value>
   </data>
-  <data name="groupBox2.Text" xml:space="preserve">
-    <value>Файл</value>
+  <data name="gbConecction.Text" xml:space="preserve">
+    <value>Соединение</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
     <value>184, 27</value>
@@ -260,17 +263,23 @@
   <data name="bRefreshport.Location" type="System.Drawing.Point, System.Drawing">
     <value>148, 22</value>
   </data>
-  <data name="gbConecction.Text" xml:space="preserve">
-    <value>Соединение</value>
+  <data name="gbLaserControl.Text" xml:space="preserve">
+    <value>Лазер</value>
   </data>
   <data name="btnLaserPwr.Text" xml:space="preserve">
     <value>Мощность</value>
   </data>
-  <data name="gbLaserControl.Text" xml:space="preserve">
-    <value>Лазер</value>
-  </data>
   <data name="tbCommand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>242, 26</value>
+    <value>240, 26</value>
+  </data>
+  <data name="gbConsole.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 259</value>
+  </data>
+  <data name="gbConsole.Size" type="System.Drawing.Size, System.Drawing">
+    <value>460, 320</value>
+  </data>
+  <data name="gbConsole.Text" xml:space="preserve">
+    <value>Консоль</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 287</value>
@@ -290,11 +299,17 @@
   <data name="label2.Text" xml:space="preserve">
     <value>Команда 1:</value>
   </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>442, 190</value>
+  </data>
+  <data name="rtbLog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>440, 188</value>
+  </data>
   <data name="btlClearLog.Text" xml:space="preserve">
     <value>Очистить</value>
   </data>
-  <data name="gbConsole.Text" xml:space="preserve">
-    <value>Консоль</value>
+  <data name="gbReference.Text" xml:space="preserve">
+    <value>Управление</value>
   </data>
   <data name="btnZeroZ.Text" xml:space="preserve">
     <value>Ноль
@@ -308,8 +323,11 @@ XY</value>
     <value>Ноль
 XY</value>
   </data>
-  <data name="gbReference.Text" xml:space="preserve">
-    <value>Управление</value>
+  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 24</value>
+  </data>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>Файл</value>
   </data>
   <data name="openToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>136, 24</value>
@@ -326,11 +344,11 @@ XY</value>
   <data name="exitToolStripMenuItem.Text" xml:space="preserve">
     <value>Выход</value>
   </data>
-  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 24</value>
+  <data name="modeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 24</value>
   </data>
-  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>Файл</value>
+  <data name="modeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Режим</value>
   </data>
   <data name="axisMillToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>254, 24</value>
@@ -356,11 +374,11 @@ XY</value>
   <data name="axisLaserToolStripMenuItem.Text" xml:space="preserve">
     <value>3-ех осевой лазер</value>
   </data>
-  <data name="modeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 24</value>
+  <data name="settingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 24</value>
   </data>
-  <data name="modeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Режим</value>
+  <data name="settingsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Настройки</value>
   </data>
   <data name="restoreSettingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>188, 24</value>
@@ -368,23 +386,17 @@ XY</value>
   <data name="restoreSettingsToolStripMenuItem.Text" xml:space="preserve">
     <value>Сброс настроек</value>
   </data>
-  <data name="settingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 24</value>
+  <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 24</value>
   </data>
-  <data name="settingsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Настройки</value>
+  <data name="helpToolStripMenuItem.Text" xml:space="preserve">
+    <value>Справка</value>
   </data>
   <data name="aboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>173, 24</value>
   </data>
   <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
     <value>О программе</value>
-  </data>
-  <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 24</value>
-  </data>
-  <data name="helpToolStripMenuItem.Text" xml:space="preserve">
-    <value>Справка</value>
   </data>
   <data name="toolStripStatusLabel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 26</value>
