@@ -141,6 +141,7 @@ namespace _3dpBurner
         	this.lblMPosX = new System.Windows.Forms.ToolStripStatusLabel();
         	this.lblMPosY = new System.Windows.Forms.ToolStripStatusLabel();
         	this.lblMPosZ = new System.Windows.Forms.ToolStripStatusLabel();
+        	this.bEdit = new System.Windows.Forms.Button();
         	this.gbJog.SuspendLayout();
         	this.groupBox2.SuspendLayout();
         	this.gbConecction.SuspendLayout();
@@ -161,20 +162,20 @@ namespace _3dpBurner
         	// 
         	// cbPort
         	// 
-        	resources.ApplyResources(this.cbPort, "cbPort");
         	this.cbPort.FormattingEnabled = true;
+        	resources.ApplyResources(this.cbPort, "cbPort");
         	this.cbPort.Name = "cbPort";
         	// 
         	// cbBaud
         	// 
-        	resources.ApplyResources(this.cbBaud, "cbBaud");
         	this.cbBaud.FormattingEnabled = true;
         	this.cbBaud.Items.AddRange(new object[] {
-        	        	        	resources.GetString("cbBaud.Items"),
-        	        	        	resources.GetString("cbBaud.Items1"),
-        	        	        	resources.GetString("cbBaud.Items2"),
-        	        	        	resources.GetString("cbBaud.Items3"),
-        	        	        	resources.GetString("cbBaud.Items4")});
+			resources.GetString("cbBaud.Items"),
+			resources.GetString("cbBaud.Items1"),
+			resources.GetString("cbBaud.Items2"),
+			resources.GetString("cbBaud.Items3"),
+			resources.GetString("cbBaud.Items4")});
+        	resources.ApplyResources(this.cbBaud, "cbBaud");
         	this.cbBaud.Name = "cbBaud";
         	// 
         	// serialPort1
@@ -407,8 +408,8 @@ namespace _3dpBurner
         	// 
         	// btnZdown
         	// 
-        	this.btnZdown.BackColor = System.Drawing.SystemColors.Control;
         	resources.ApplyResources(this.btnZdown, "btnZdown");
+        	this.btnZdown.BackColor = System.Drawing.SystemColors.Control;
         	this.btnZdown.ForeColor = System.Drawing.SystemColors.HotTrack;
         	this.btnZdown.Name = "btnZdown";
         	this.btnZdown.UseVisualStyleBackColor = false;
@@ -416,8 +417,8 @@ namespace _3dpBurner
         	// 
         	// btnZup
         	// 
-        	this.btnZup.BackColor = System.Drawing.SystemColors.Control;
         	resources.ApplyResources(this.btnZup, "btnZup");
+        	this.btnZup.BackColor = System.Drawing.SystemColors.Control;
         	this.btnZup.ForeColor = System.Drawing.SystemColors.HotTrack;
         	this.btnZup.Name = "btnZup";
         	this.btnZup.UseVisualStyleBackColor = false;
@@ -432,6 +433,7 @@ namespace _3dpBurner
         	// 
         	// groupBox2
         	// 
+        	this.groupBox2.Controls.Add(this.bEdit);
         	this.groupBox2.Controls.Add(this.lblRemaining);
         	this.groupBox2.Controls.Add(this.lblBuf);
         	this.groupBox2.Controls.Add(this.lblFileProgress);
@@ -635,21 +637,21 @@ namespace _3dpBurner
         	// 
         	// menuStrip1
         	// 
-        	this.menuStrip1.BackColor = System.Drawing.Color.LightGray;
+        	this.menuStrip1.BackColor = System.Drawing.Color.Gainsboro;
         	this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-        	        	        	this.fileToolStripMenuItem,
-        	        	        	this.modeToolStripMenuItem,
-        	        	        	this.settingsToolStripMenuItem,
-        	        	        	this.helpToolStripMenuItem});
+			this.fileToolStripMenuItem,
+			this.modeToolStripMenuItem,
+			this.settingsToolStripMenuItem,
+			this.helpToolStripMenuItem});
         	resources.ApplyResources(this.menuStrip1, "menuStrip1");
         	this.menuStrip1.Name = "menuStrip1";
         	// 
         	// fileToolStripMenuItem
         	// 
         	this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-        	        	        	this.openToolStripMenuItem,
-        	        	        	this.toolStripMenuItem1,
-        	        	        	this.exitToolStripMenuItem});
+			this.openToolStripMenuItem,
+			this.toolStripMenuItem1,
+			this.exitToolStripMenuItem});
         	this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
         	resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
         	// 
@@ -673,10 +675,10 @@ namespace _3dpBurner
         	// modeToolStripMenuItem
         	// 
         	this.modeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-        	        	        	this.axisMillToolStripMenuItem,
-        	        	        	this.axisLaserPWRSToolStripMenuItem,
-        	        	        	this.axisLaserPWRZToolStripMenuItem,
-        	        	        	this.axisLaserToolStripMenuItem});
+			this.axisMillToolStripMenuItem,
+			this.axisLaserPWRSToolStripMenuItem,
+			this.axisLaserPWRZToolStripMenuItem,
+			this.axisLaserToolStripMenuItem});
         	this.modeToolStripMenuItem.Name = "modeToolStripMenuItem";
         	resources.ApplyResources(this.modeToolStripMenuItem, "modeToolStripMenuItem");
         	// 
@@ -713,7 +715,7 @@ namespace _3dpBurner
         	// settingsToolStripMenuItem
         	// 
         	this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-        	        	        	this.restoreSettingsToolStripMenuItem});
+			this.restoreSettingsToolStripMenuItem});
         	this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
         	resources.ApplyResources(this.settingsToolStripMenuItem, "settingsToolStripMenuItem");
         	// 
@@ -726,7 +728,7 @@ namespace _3dpBurner
         	// helpToolStripMenuItem
         	// 
         	this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-        	        	        	this.aboutToolStripMenuItem});
+			this.aboutToolStripMenuItem});
         	this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
         	resources.ApplyResources(this.helpToolStripMenuItem, "helpToolStripMenuItem");
         	// 
@@ -738,21 +740,21 @@ namespace _3dpBurner
         	// 
         	// statusStrip1
         	// 
-        	resources.ApplyResources(this.statusStrip1, "statusStrip1");
         	this.statusStrip1.BackColor = System.Drawing.SystemColors.Control;
         	this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-        	        	        	this.toolStripStatusLabel2,
-        	        	        	this.toolStripStatusLabel1,
-        	        	        	this.lblStatus,
-        	        	        	this.toolStripStatusLabel3,
-        	        	        	this.lblWPos,
-        	        	        	this.lblWPosX,
-        	        	        	this.lblWPosY,
-        	        	        	this.lblWPosZ,
-        	        	        	this.toolStripStatusLabel8,
-        	        	        	this.lblMPosX,
-        	        	        	this.lblMPosY,
-        	        	        	this.lblMPosZ});
+			this.toolStripStatusLabel2,
+			this.toolStripStatusLabel1,
+			this.lblStatus,
+			this.toolStripStatusLabel3,
+			this.lblWPos,
+			this.lblWPosX,
+			this.lblWPosY,
+			this.lblWPosZ,
+			this.toolStripStatusLabel8,
+			this.lblMPosX,
+			this.lblMPosY,
+			this.lblMPosZ});
+        	resources.ApplyResources(this.statusStrip1, "statusStrip1");
         	this.statusStrip1.Name = "statusStrip1";
         	this.statusStrip1.ShowItemToolTips = true;
         	this.statusStrip1.SizingGrip = false;
@@ -772,6 +774,7 @@ namespace _3dpBurner
         	resources.ApplyResources(this.lblStatus, "lblStatus");
         	this.lblStatus.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
         	this.lblStatus.Name = "lblStatus";
+        	this.lblStatus.Spring = true;
         	// 
         	// toolStripStatusLabel3
         	// 
@@ -789,25 +792,28 @@ namespace _3dpBurner
         	// 
         	resources.ApplyResources(this.lblWPosX, "lblWPosX");
         	this.lblWPosX.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
-        	        	        	| System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
-        	        	        	| System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+			| System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
+			| System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
         	this.lblWPosX.Name = "lblWPosX";
+        	this.lblWPosX.Spring = true;
         	// 
         	// lblWPosY
         	// 
         	resources.ApplyResources(this.lblWPosY, "lblWPosY");
         	this.lblWPosY.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
-        	        	        	| System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
-        	        	        	| System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+			| System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
+			| System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
         	this.lblWPosY.Name = "lblWPosY";
+        	this.lblWPosY.Spring = true;
         	// 
         	// lblWPosZ
         	// 
         	resources.ApplyResources(this.lblWPosZ, "lblWPosZ");
         	this.lblWPosZ.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
-        	        	        	| System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
-        	        	        	| System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+			| System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
+			| System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
         	this.lblWPosZ.Name = "lblWPosZ";
+        	this.lblWPosZ.Spring = true;
         	// 
         	// toolStripStatusLabel8
         	// 
@@ -820,25 +826,35 @@ namespace _3dpBurner
         	// 
         	resources.ApplyResources(this.lblMPosX, "lblMPosX");
         	this.lblMPosX.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
-        	        	        	| System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
-        	        	        	| System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+			| System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
+			| System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
         	this.lblMPosX.Name = "lblMPosX";
+        	this.lblMPosX.Spring = true;
         	// 
         	// lblMPosY
         	// 
         	resources.ApplyResources(this.lblMPosY, "lblMPosY");
         	this.lblMPosY.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
-        	        	        	| System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
-        	        	        	| System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+			| System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
+			| System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
         	this.lblMPosY.Name = "lblMPosY";
+        	this.lblMPosY.Spring = true;
         	// 
         	// lblMPosZ
         	// 
         	resources.ApplyResources(this.lblMPosZ, "lblMPosZ");
         	this.lblMPosZ.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
-        	        	        	| System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
-        	        	        	| System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+			| System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
+			| System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
         	this.lblMPosZ.Name = "lblMPosZ";
+        	this.lblMPosZ.Spring = true;
+        	// 
+        	// bEdit
+        	// 
+        	resources.ApplyResources(this.bEdit, "bEdit");
+        	this.bEdit.Name = "bEdit";
+        	this.bEdit.UseVisualStyleBackColor = true;
+        	this.bEdit.Click += new System.EventHandler(this.BEditClick);
         	// 
         	// frm3dpBurner
         	// 
@@ -878,6 +894,7 @@ namespace _3dpBurner
         	this.statusStrip1.PerformLayout();
         	this.ResumeLayout(false);
         	this.PerformLayout();
+
         }
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
@@ -973,5 +990,6 @@ namespace _3dpBurner
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.Button bEdit;
     }
 }

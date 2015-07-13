@@ -31,6 +31,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.IO.Ports;
 using System.IO;
+
 //using System.Threading;
 
 namespace _3dpBurner
@@ -75,6 +76,8 @@ namespace _3dpBurner
         //Constructor
         public frm3dpBurner()
         {
+//        	this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+//			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;			
             InitializeComponent();
             System.Windows.Forms.Application.ThreadException += new System.Threading.ThreadExceptionEventHandler(Application_ThreadException);
             AppDomain currentDomain = AppDomain.CurrentDomain;
@@ -117,6 +120,7 @@ namespace _3dpBurner
             cbPort.Enabled = !serialPort1.IsOpen;
             cbBaud.Enabled = !serialPort1.IsOpen;
             bRefreshport.Enabled = !serialPort1.IsOpen;
+            bEdit.Enabled = !transfer;// && (tbFile.Text != "");
 
             tbFile.Enabled = !transfer;
             bOpenfile.Enabled = !transfer;
@@ -818,5 +822,10 @@ namespace _3dpBurner
         {
         	bOpenfile_Click(sender, e);
         }
+        
+		void BEditClick(object sender, EventArgs e)
+		{
+			System.Diagnostics.Process.Start(tbFile.Text);
+		}
     }
 }

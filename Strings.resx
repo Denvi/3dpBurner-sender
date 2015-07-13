@@ -118,12 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="buttonTextPortClose" xml:space="preserve">
-    <value>Close
-</value>
+    <value>Close</value>
   </data>
   <data name="buttonTextPortOpen" xml:space="preserve">
-    <value>Open
-</value>
+    <value>Open</value>
   </data>
   <data name="logError" xml:space="preserve">
     <value>[Error]: {0}. </value>
@@ -161,7 +159,6 @@
   </data>
   <data name="msgBoxMessageFileDone" xml:space="preserve">
     <value>Yeah!. Burning Done!
-
 Elapsed time: {0}</value>
   </data>
   <data name="msbBoxCaptionFileDone" xml:space="preserve">

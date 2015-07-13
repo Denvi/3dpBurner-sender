@@ -120,24 +120,18 @@
   <data name="bOpenPort.Text" xml:space="preserve">
     <value>Открыть</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="cbPort.Location" type="System.Drawing.Point, System.Drawing">
-    <value>55, 23</value>
-  </data>
-  <data name="cbBaud.Location" type="System.Drawing.Point, System.Drawing">
-    <value>260, 23</value>
-  </data>
   <data name="btnLaserOn.Text" xml:space="preserve">
     <value>Вкл</value>
   </data>
   <data name="btsLaserOff.Text" xml:space="preserve">
     <value>Выкл</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnCustom1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>352, 250</value>
+    <value>264, 203</value>
   </data>
   <data name="btnCustom1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 28</value>
+    <value>75, 23</value>
   </data>
   <data name="btnCustom1.Text" xml:space="preserve">
     <value>Отправить</value>
@@ -146,20 +140,14 @@
     <value>Снять
 блок</value>
   </data>
-  <data name="bStart.Location" type="System.Drawing.Point, System.Drawing">
-    <value>352, 108</value>
-  </data>
-  <data name="bStart.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 28</value>
-  </data>
   <data name="bStart.Text" xml:space="preserve">
     <value>Пуск</value>
   </data>
   <data name="bSendCmd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>352, 218</value>
+    <value>264, 177</value>
   </data>
   <data name="bSendCmd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 28</value>
+    <value>75, 23</value>
   </data>
   <data name="bSendCmd.Text" xml:space="preserve">
     <value>Отправить</value>
@@ -167,149 +155,125 @@
   <data name="bHome.Text" xml:space="preserve">
     <value>Домой</value>
   </data>
-  <data name="pbFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>333, 25</value>
-  </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 17</value>
+    <value>42, 13</value>
   </data>
   <data name="label7.Text" xml:space="preserve">
     <value>Буфер:</value>
   </data>
   <data name="btnCustom2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>352, 281</value>
+    <value>264, 229</value>
   </data>
   <data name="btnCustom2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 28</value>
+    <value>75, 23</value>
   </data>
   <data name="btnCustom2.Text" xml:space="preserve">
     <value>Отправить</value>
   </data>
   <data name="tbCustom1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 26</value>
+    <value>181, 20</value>
   </data>
   <data name="tbCustom2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>239, 26</value>
+    <value>180, 20</value>
   </data>
   <data name="btnReset.Text" xml:space="preserve">
     <value>Сброс</value>
-  </data>
-  <data name="gbJog.Text" xml:space="preserve">
-    <value>Перемещение</value>
   </data>
   <data name="chkAbsolute.Text" xml:space="preserve">
     <value>G90 после перемещения</value>
   </data>
   <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 17</value>
+    <value>88, 13</value>
   </data>
   <data name="label9.Text" xml:space="preserve">
     <value>Предустановки:</value>
   </data>
-  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>84, 95</value>
-  </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 17</value>
+    <value>30, 13</value>
   </data>
   <data name="label6.Text" xml:space="preserve">
     <value>Шаг:</value>
   </data>
-  <data name="groupBox2.Text" xml:space="preserve">
-    <value>Файл</value>
+  <data name="gbJog.Text" xml:space="preserve">
+    <value>Перемещение</value>
+  </data>
+  <data name="bEdit.Text" xml:space="preserve">
+    <value>Правка</value>
   </data>
   <data name="lblFileProgress.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 17</value>
+    <value>68, 13</value>
   </data>
   <data name="lblFileProgress.Text" xml:space="preserve">
     <value>0% (0 строк)</value>
   </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>228, 62</value>
+  </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 17</value>
+    <value>59, 13</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Осталось:</value>
   </data>
-  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>310, 58</value>
-  </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 17</value>
+    <value>50, 13</value>
   </data>
   <data name="label8.Text" xml:space="preserve">
     <value>Прошло:</value>
   </data>
-  <data name="gbConecction.Text" xml:space="preserve">
-    <value>Соединение</value>
-  </data>
-  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 27</value>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Файл</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 17</value>
+    <value>58, 13</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
     <value>Скорость:</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 27</value>
+    <value>5, 22</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 17</value>
+    <value>35, 13</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
     <value>Порт:</value>
   </data>
-  <data name="bRefreshport.Location" type="System.Drawing.Point, System.Drawing">
-    <value>148, 22</value>
-  </data>
-  <data name="gbLaserControl.Text" xml:space="preserve">
-    <value>Лазер</value>
+  <data name="gbConecction.Text" xml:space="preserve">
+    <value>Соединение</value>
   </data>
   <data name="btnLaserPwr.Text" xml:space="preserve">
     <value>Мощность</value>
   </data>
+  <data name="gbLaserControl.Text" xml:space="preserve">
+    <value>Лазер</value>
+  </data>
   <data name="tbCommand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 26</value>
-  </data>
-  <data name="gbConsole.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 259</value>
-  </data>
-  <data name="gbConsole.Size" type="System.Drawing.Size, System.Drawing">
-    <value>460, 320</value>
-  </data>
-  <data name="gbConsole.Text" xml:space="preserve">
-    <value>Консоль</value>
+    <value>181, 20</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 287</value>
+    <value>8, 233</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 17</value>
+    <value>64, 13</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>Команда 2:</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 256</value>
+    <value>8, 208</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 17</value>
+    <value>64, 13</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>Команда 1:</value>
   </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>442, 190</value>
-  </data>
-  <data name="rtbLog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>440, 188</value>
-  </data>
   <data name="btlClearLog.Text" xml:space="preserve">
     <value>Очистить</value>
   </data>
-  <data name="gbReference.Text" xml:space="preserve">
-    <value>Управление</value>
+  <data name="gbConsole.Text" xml:space="preserve">
+    <value>Консоль</value>
   </data>
   <data name="btnZeroZ.Text" xml:space="preserve">
     <value>Ноль
@@ -323,98 +287,128 @@ XY</value>
     <value>Ноль
 XY</value>
   </data>
-  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 24</value>
-  </data>
-  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>Файл</value>
+  <data name="gbReference.Text" xml:space="preserve">
+    <value>Управление</value>
   </data>
   <data name="openToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>136, 24</value>
+    <value>121, 22</value>
   </data>
   <data name="openToolStripMenuItem.Text" xml:space="preserve">
     <value>Открыть</value>
   </data>
   <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 6</value>
+    <value>118, 6</value>
   </data>
   <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>136, 24</value>
+    <value>121, 22</value>
   </data>
   <data name="exitToolStripMenuItem.Text" xml:space="preserve">
     <value>Выход</value>
   </data>
-  <data name="modeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 24</value>
+  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
   </data>
-  <data name="modeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Режим</value>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>Файл</value>
   </data>
   <data name="axisMillToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>254, 24</value>
+    <value>212, 22</value>
   </data>
   <data name="axisMillToolStripMenuItem.Text" xml:space="preserve">
     <value>3-ех осевой фрезер</value>
   </data>
   <data name="axisLaserPWRSToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>254, 24</value>
+    <value>212, 22</value>
   </data>
   <data name="axisLaserPWRSToolStripMenuItem.Text" xml:space="preserve">
     <value>2-ух осевой лазер PWR-S</value>
   </data>
   <data name="axisLaserPWRZToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>254, 24</value>
+    <value>212, 22</value>
   </data>
   <data name="axisLaserPWRZToolStripMenuItem.Text" xml:space="preserve">
     <value>2-ух осевой лазер PWR-Z</value>
   </data>
   <data name="axisLaserToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>254, 24</value>
+    <value>212, 22</value>
   </data>
   <data name="axisLaserToolStripMenuItem.Text" xml:space="preserve">
     <value>3-ех осевой лазер</value>
   </data>
-  <data name="settingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 24</value>
+  <data name="modeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 20</value>
   </data>
-  <data name="settingsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Настройки</value>
+  <data name="modeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Режим</value>
   </data>
   <data name="restoreSettingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>188, 24</value>
+    <value>162, 22</value>
   </data>
   <data name="restoreSettingsToolStripMenuItem.Text" xml:space="preserve">
     <value>Сброс настроек</value>
   </data>
-  <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 24</value>
+  <data name="settingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 20</value>
   </data>
-  <data name="helpToolStripMenuItem.Text" xml:space="preserve">
-    <value>Справка</value>
+  <data name="settingsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Настройки</value>
   </data>
   <data name="aboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 24</value>
+    <value>149, 22</value>
   </data>
   <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
     <value>О программе</value>
   </data>
+  <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 20</value>
+  </data>
+  <data name="helpToolStripMenuItem.Text" xml:space="preserve">
+    <value>Справка</value>
+  </data>
   <data name="toolStripStatusLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 26</value>
+    <value>46, 20</value>
   </data>
   <data name="toolStripStatusLabel2.Text" xml:space="preserve">
     <value>Статус:</value>
   </data>
+  <data name="lblStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 20</value>
+  </data>
   <data name="lblWPos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>144, 26</value>
+    <value>48, 20</value>
   </data>
   <data name="lblWPos.Text" xml:space="preserve">
-    <value>Рабочие коорд.:</value>
+    <value>РК:</value>
+  </data>
+  <data name="lblWPos.ToolTipText" xml:space="preserve">
+    <value>Рабочие координаты</value>
+  </data>
+  <data name="lblWPosX.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 20</value>
+  </data>
+  <data name="lblWPosY.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 20</value>
+  </data>
+  <data name="lblWPosZ.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 20</value>
   </data>
   <data name="toolStripStatusLabel8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 26</value>
+    <value>52, 20</value>
   </data>
   <data name="toolStripStatusLabel8.Text" xml:space="preserve">
-    <value>Машинные коорд.:</value>
+    <value>МК:</value>
+  </data>
+  <data name="toolStripStatusLabel8.ToolTipText" xml:space="preserve">
+    <value>Машинные координаты</value>
+  </data>
+  <data name="lblMPosX.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 20</value>
+  </data>
+  <data name="lblMPosY.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 20</value>
+  </data>
+  <data name="lblMPosZ.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 20</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

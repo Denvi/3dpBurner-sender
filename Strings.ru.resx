@@ -152,15 +152,13 @@
     <value>Очередь</value>
   </data>
   <data name="buttonTextPortOpen" xml:space="preserve">
-    <value>Открыть
-</value>
+    <value>Открыть</value>
   </data>
   <data name="errorSerialRead" xml:space="preserve">
     <value>Ошибка чтения строки из последовательного порта</value>
   </data>
   <data name="buttonTextPortClose" xml:space="preserve">
-    <value>Закрыть
-</value>
+    <value>Закрыть</value>
   </data>
   <data name="logError" xml:space="preserve">
     <value>[Ошибка]: {0}. </value>
@@ -213,7 +211,6 @@
   </data>
   <data name="msgBoxMessageFileDone" xml:space="preserve">
     <value>Задание выполнено!
-
 Прошло времени: {0}</value>
   </data>
 </root>
