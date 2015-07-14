@@ -53,6 +53,8 @@ namespace _3dpBurner
 
         bool transfer = false;//true whe transfer in progress
         bool dataProcessing;//false when no data processing pending
+        bool homing = false;
+        bool storeZ = false;
 
         bool jogging=false;//true when we are jogging
 
@@ -128,20 +130,26 @@ namespace _3dpBurner
             gbJog.Enabled = serialPort1.IsOpen && !transfer;
             gbLaserControl.Enabled = serialPort1.IsOpen && !transfer;
             gbReference.Enabled = serialPort1.IsOpen;
-			bHome.Enabled = serialPort1.IsOpen && !transfer;
+			
+            bHome.Enabled = serialPort1.IsOpen && !transfer;
 			btnUnlock.Enabled = serialPort1.IsOpen && !transfer;
 			btnZeroXY.Enabled = serialPort1.IsOpen && !transfer;
 			btnZeroZ.Enabled = serialPort1.IsOpen && !transfer;
 			btnZero.Enabled = serialPort1.IsOpen && !transfer;
 
             btnReset.Enabled = serialPort1.IsOpen;
-            if (btnReset.Enabled) btnReset.BackColor = Color.Red; else btnReset.BackColor = Color.WhiteSmoke;
+            if (btnReset.Enabled) btnReset.BackColor = Color.Red;
 
             bXup.BackColor = bXup.Enabled ? SystemColors.ActiveCaption : SystemColors.Control;
             bXdown.BackColor = bXdown.Enabled ? SystemColors.ActiveCaption : SystemColors.Control;
             bYup.BackColor = bYup.Enabled ? SystemColors.ActiveCaption : SystemColors.Control;
             bYdown.BackColor = bYdown.Enabled ? SystemColors.ActiveCaption : SystemColors.Control;
-            
+
+            foreach (Button button in gbReference.Controls)
+            {
+                if (!button.Enabled) button.BackColor = SystemColors.Control;
+            }
+
             tbCommand.Enabled = serialPort1.IsOpen && !transfer;
             bSendCmd.Enabled = tbCommand.Enabled;
 
@@ -167,7 +175,17 @@ namespace _3dpBurner
         //Process the received data line
         private void dataRx(object sender, EventArgs e)
         {
-            //staus message?
+            //alarm?
+            if (rxString.Contains("ALARM"))
+            {
+                lblStatus.Text = Strings.statusAlarm;
+                lblStatus.ForeColor = Color.White;
+                lblStatus.BackColor = Color.Red;
+
+                btnZeroXY.BackColor = SystemColors.Control;
+                btnZeroZ.BackColor = btnZeroXY.BackColor;
+            }
+            //status message?
             if ((rxString.Length > 0) && (rxString[0] == '<'))
             {
                 toolStripStatusLabel1.Text =rxString;
@@ -178,7 +196,7 @@ namespace _3dpBurner
                 	case "Idle":
                 		lblStatus.Text = Strings.statusIdle;
                 		lblStatus.ForeColor = Color.Black;
-                		lblStatus.BackColor = Color.White;
+                        lblStatus.BackColor = SystemColors.Control;
                 		break;
                 	case "Alarm":
                 		lblStatus.Text = Strings.statusAlarm;
@@ -218,10 +236,22 @@ namespace _3dpBurner
                 lblWPosX.Text = str[4].Substring(5);
                 lblWPosY.Text = str[5];
                 lblWPosZ.Text = str[6].Remove(str[6].Length - 1, 1);
-                
-                lblWPos.BackColor = (lblMPosX.Text == lblWPosX.Text && lblMPosY.Text == lblWPosY.Text && lblMPosZ.Text == lblWPosZ.Text) ?
-                	Color.Yellow : SystemColors.Control;                               
-                
+
+                //Highlight actual buttons
+                btnZeroXY.BackColor = (lblMPosX.Text == lblWPosX.Text && lblMPosY.Text == lblWPosY.Text && lblMPosZ.Text == lblWPosZ.Text && lblStatus.Text == Strings.statusIdle) ?
+                    Color.Moccasin : SystemColors.Control;
+                btnZeroZ.BackColor = btnZeroXY.BackColor;
+                btnZero.BackColor = btnZeroXY.BackColor;                
+                bHome.BackColor = (lblStatus.Text == Strings.statusAlarm) ? Color.Moccasin : SystemColors.Control;
+                btnUnlock.BackColor = bHome.BackColor;
+
+                //Save Z top
+                if (storeZ)
+                {
+                    storeZ = false;
+                    tbCustom1.Text = string.Format("G92.1 G90 G0 Z{0}", lblMPosZ);
+                }
+
                 dataProcessing = false;
                 return;
             }
@@ -241,31 +271,45 @@ namespace _3dpBurner
                 dataProcessing = false;
                 return;
             }
+            //homing respose?
+            if (homing)
+            {
+                homing = false;
+                storeZ = mnuSettingsStoreZ.Checked;
+            }
             //if no transfer, no any more to do
             if (!transfer) return;
             //line transfer response
             if (rxString != "ok")//Add line-response only if not ok (if many lines the stream procces is slowly)
             {
-                rtbLog.AppendText(fileLines[fileLinesConfirmed] + " >" + rxString+"\r");
+                rtbLog.AppendText(fileLines[fileLinesConfirmed] + " >" + rxString + "\r");
                 rtbLog.ScrollToCaret();
-            }
-            bufFree += (fileLines[fileLinesConfirmed].Length + 1);//update bytes supose to be free on grbl rx bufer
-            fileLinesConfirmed++;//line processed
-            if (fileLinesConfirmed >= fileLinesCount)//Transfer finished and processed? Update status and controls
-            {
                 transfer = false;
                 updateProgress();
-				rtbLog.AppendText(String.Format(Strings.logFileDone, lblElapsed.Text));
-                rtbLog.ScrollToCaret();
-                MessageBox.Show(string.Format(Strings.msgBoxMessageFileDone, lblElapsed.Text), Strings.msbBoxCaptionFileDone, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show(Strings.msgBoxMessageFileError, Strings.msgBoxCaptionFileError, MessageBoxButtons.OK, MessageBoxIcon.Error);                                
                 updateControls();
-             }
-             else//not finished
-             {
-                if (fileLinesSent < fileLinesCount) sendNextLine();//If more lines on file, send it
-             }
-             updateProgress();
-             dataProcessing = false;
+                dataProcessing = false;
+            }
+            else
+            {
+                bufFree += (fileLines[fileLinesConfirmed].Length + 1);//update bytes supose to be free on grbl rx bufer
+                fileLinesConfirmed++;//line processed
+                if (fileLinesConfirmed >= fileLinesCount)//Transfer finished and processed? Update status and controls
+                {
+                    transfer = false;
+                    updateProgress();
+                    rtbLog.AppendText(String.Format(Strings.logFileDone, lblElapsed.Text));
+                    rtbLog.ScrollToCaret();
+                    MessageBox.Show(string.Format(Strings.msgBoxMessageFileDone, lblElapsed.Text), Strings.msbBoxCaptionFileDone, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    updateControls();
+                }
+                else//not finished
+                {
+                    if (fileLinesSent < fileLinesCount) sendNextLine();//If more lines on file, send it
+                }
+                updateProgress();
+                dataProcessing = false;
+            }
         }
         //Send next line from fileStreaming
         private void sendNextLine()
@@ -327,7 +371,7 @@ namespace _3dpBurner
                 serialPort1.BaudRate = Convert.ToInt32(cbBaud.Text);
                 serialPort1.Open();
                 dataProcessing = true;
-//                grblReset();
+                grblReset();
                 updateControls();
                 return (true);
             }
@@ -360,7 +404,7 @@ namespace _3dpBurner
         private void grblReset()//Stop/reset button
         {
             transfer = false;
-            rtbLog.AppendText("[CTRL-X]");
+            rtbLog.AppendText("[CTRL-X]\r\n");
             var dataArray = new byte[] { 24 };//Ctrl-X
             serialPort1.Write(dataArray, 0, 1);         
         }
@@ -410,25 +454,24 @@ namespace _3dpBurner
                 tbCustom2.Text = Properties.Settings1.Default.custom2;
                 mode = Properties.Settings1.Default.mode;
                 chkAbsolute.Checked = Properties.Settings1.Default.absolute;
-                if (mode==axisMillToolStripMenuItem.Text)
+                mnuSettingsStoreZ.Checked = Properties.Settings1.Default.storez;
+                mnuSettingsStoreXY.Checked = Properties.Settings1.Default.storexy;
+
+                //Set mode
+                foreach (MenuItem item in mnuMode.MenuItems)
                 {
-                    selectMode(axisMillToolStripMenuItem);
-                }
-                else
-                    if (mode==axisLaserPWRSToolStripMenuItem.Text)
+                    if (item.Text == mode)
                     {
-                        selectMode(axisLaserPWRSToolStripMenuItem);
+                        selectMode(item);
+                        break;
                     }
-                    else
-                        if (mode == axisLaserPWRZToolStripMenuItem.Text)
-                        {
-                            selectMode(axisLaserPWRZToolStripMenuItem);
-                        }
-                        else
-                            if (mode == axisLaserToolStripMenuItem.Text)
-                            {
-                                selectMode(axisLaserToolStripMenuItem);
-                            }
+                }
+
+                //Check step radiobutton
+                foreach (Control ctrl in gbJog.Controls)
+                {
+                    if (ctrl.GetType() == button1.GetType()) (ctrl as RadioButton).Checked = (ctrl as RadioButton).Text == tbStepSize.Text;
+                }
             }
             catch (Exception e)
             {
@@ -440,11 +483,16 @@ namespace _3dpBurner
         {
             try
             {
-                string mode="";//get selected mode
-                if(axisMillToolStripMenuItem.Checked) mode=axisMillToolStripMenuItem.Text;//3 axis mill
-                else if (axisLaserPWRSToolStripMenuItem.Checked) mode = axisLaserPWRSToolStripMenuItem.Text;//2 axis laser power with S
-                else if (axisLaserPWRZToolStripMenuItem.Checked) mode = axisLaserPWRZToolStripMenuItem.Text;//2 axis laser power with Z
-                else if (axisLaserToolStripMenuItem.Checked) mode = axisLaserToolStripMenuItem.Text;//3 axis laser
+                string mode = "";//get selected mode
+
+                foreach (MenuItem item in mnuMode.MenuItems)
+                {
+                    if (item.Checked)
+                    {
+                        mode = item.Text;
+                        break;
+                    }
+                }
 
                 Properties.Settings1.Default.port = cbPort.Text;
                 Properties.Settings1.Default.baud = cbBaud.Text;
@@ -455,6 +503,8 @@ namespace _3dpBurner
                 Properties.Settings1.Default.custom2 = tbCustom2.Text;
                 Properties.Settings1.Default.mode = mode;
                 Properties.Settings1.Default.absolute = chkAbsolute.Checked;
+                Properties.Settings1.Default.storez = mnuSettingsStoreZ.Checked;
+                Properties.Settings1.Default.storexy = mnuSettingsStoreXY.Checked;
                 Properties.Settings1.Default.Save();
                 
             }
@@ -503,37 +553,8 @@ namespace _3dpBurner
         //Homming button
         private void bHome_Click(object sender, EventArgs e)
         {
+            homing = true;
             sendLine("$H");
-        }
-        //.01 Step button
-        private void button12_Click(object sender, EventArgs e)
-        {
-            tbStepSize.Text="0.01";
-        }
-        //.1 Step button
-        private void button19_Click(object sender, EventArgs e)
-        {
-            tbStepSize.Text = "0.1";
-        }
-        //1 Step button
-        private void button20_Click(object sender, EventArgs e)
-        {
-            tbStepSize.Text = "1";
-        }
-        //5 step button
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            tbStepSize.Text = "5";
-        }
-        //10 Step button
-        private void button21_Click(object sender, EventArgs e)
-        {
-            tbStepSize.Text = "10";
-        }
-        //100 Step button
-        private void button22_Click(object sender, EventArgs e)
-        {
-            tbStepSize.Text = "100";
         }
         //Refresh button
         public void bRefreshport_Click(object sender, EventArgs e)
@@ -622,6 +643,7 @@ namespace _3dpBurner
         {
             grblReset();
             transfer = false;
+            prepareFile();
             updateControls();          
         }
         //Unlock alarm button
@@ -657,7 +679,7 @@ namespace _3dpBurner
         //Laser On button
         private void btnLaserOn_Click(object sender, EventArgs e)
         {
-            sendLine("M3 S" + tbLaserPwr.Text);
+            sendLine(string.Format("M3 {0} {1}", mnuModeLaserZ.Checked ? "Z" : "S", tbLaserPwr.Text));
         }
         //Laser Off button
         private void btsLaserOff_Click(object sender, EventArgs e)
@@ -700,72 +722,71 @@ namespace _3dpBurner
         //Laser PWR button
         private void btnLaserPwr_Click(object sender, EventArgs e)
         {
-            //Mode 2axisLaserPwrZ
-            if (axisLaserPWRZToolStripMenuItem.Checked) sendLine("Z" + tbLaserPwr.Text);//Variable spindle PWM managed by 'Z'
-            //Mode 2axisLaserPwrS or 3axisLaser or 3axisMill
-            else
-                sendLine("S" + tbLaserPwr.Text);//Variable spindle PWM managed by 'Z'
+            sendLine(string.Format("{0} {1}", mnuModeLaserZ.Checked ? "Z" : "S", tbLaserPwr.Text));
         }
         //Select mode (enable/disable and mod user controls for the specified mode)
-        private void selectMode(ToolStripMenuItem mode)
+        private void selectMode(MenuItem mode)
         {
-            axisMillToolStripMenuItem.Checked=false;
-            axisLaserPWRSToolStripMenuItem.Checked=false;
-            axisLaserPWRZToolStripMenuItem.Checked=false;
-            axisLaserToolStripMenuItem.Checked = false;
+            mnuModeMill.Checked = false;
+            mnuModeLaserS.Checked = false;
+            mnuModeLaserZ.Checked = false;
+            mnuModeLaser.Checked = false;
+
             mode.Checked = true;
-                //3axis mode? (mode 3axisMill or 3axisLaser). Show 3axis controls
-                if(mode==axisMillToolStripMenuItem|mode==axisLaserToolStripMenuItem)
+
+            //3axis mode? (mode 3axisMill or 3axisLaser). Show 3axis controls
+            if(mode == mnuModeMill | mode == mnuModeLaser)
+            {
+                btnZdown.Enabled = true;
+                btnZup.Enabled = true;
+                btnZero.Visible=false;
+                btnZeroXY.Visible = true;
+                btnZeroZ.Visible = true;
+            }
+            //2axis mode (mode 2axisLaserPwrS or 2axisLaserPwrZ).Show 2axis controls
+            else
+            {
+                btnZdown.Enabled = false;
+                btnZup.Enabled = false;
+                btnZero.Visible=true;
+                btnZeroXY.Visible = false;
+                btnZeroZ.Visible = false;
+            }
+
+            //Laser mode? (Mode 2axisLaserPwrS or 2axisLaserPwrZ or 3axisLaser). Rename laser controls
+            if (mode != mnuModeMill)
                 {
-                    btnZdown.Enabled = true;
-                    btnZup.Enabled = true;
-                    btnZero.Visible=false;
-                    btnZeroXY.Visible = true;
-                    btnZeroZ.Visible = true;
+                    gbLaserControl.Text = Strings.groupBoxCaptionLaser;
+                    btnLaserPwr.Text = Strings.buttonTextPower;
                 }
-                //2axis mode (mode 2axisLaserPwrS or 2axisLaserPwrZ).Show 2axis controls
-                else
+            //Mill mode? (3axisMill). Rename mill controls
+            else
                 {
-                    btnZdown.Enabled = false;
-                    btnZup.Enabled = false;
-                    btnZero.Visible=true;
-                    btnZeroXY.Visible = false;
-                    btnZeroZ.Visible = false;
+                    btnZdown.Visible = true;
+                    btnZup.Visible = true;
+                    gbLaserControl.Text = Strings.groupBoxCaptionSpindle;
+                    btnLaserPwr.Text = Strings.buttonTextSpeed;
                 }
-                //Laser mode? (Mode 2axisLaserPwrS or 2axisLaserPwrZ or 3axisLaser). Rename laser controls
-                if (mode==axisLaserPWRSToolStripMenuItem | mode==axisLaserPWRZToolStripMenuItem | mode==axisLaserToolStripMenuItem)
-                    {
-                        gbLaserControl.Text = Strings.groupBoxCaptionLaser;
-                        btnLaserPwr.Text = Strings.buttonTextPower;
-                    }
-                //Mill mode? (3axisMill). Rename mill controls
-                else
-                    {
-                        btnZdown.Visible = true;
-                        btnZup.Visible = true;
-                        gbLaserControl.Text = Strings.groupBoxCaptionSpindle;
-                        btnLaserPwr.Text = Strings.buttonTextSpeed;
-                    }
         }
         //Mode 3axisMill Selection. Standard 3 axis mill mode
         private void axisMillToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            selectMode(axisMillToolStripMenuItem);
+            selectMode(mnuModeMill);
         }
         //Mode 2axisLaserPwrS Selection. 2 axis laser using "Sx" as power set command
         private void axisLaserPWRSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            selectMode(axisLaserPWRSToolStripMenuItem);
+            selectMode(mnuModeLaserS);
         }
         //Mode 2axisLaserPwrZ Selection. 2 axis laser using "Zx" as power set command
         private void axisLaserPWRZToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            selectMode(axisLaserPWRZToolStripMenuItem);
+            selectMode(mnuModeLaserZ);
         }
         //Mode 3axisLaser Selection. 3 axis laser (use "Sx" as power set command)
         private void axisLaserToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            selectMode(axisLaserToolStripMenuItem);
+            selectMode(mnuModeLaser);
         }
         //Jog Z+ button
         private void btnZup_Click(object sender, EventArgs e)
@@ -783,6 +804,7 @@ namespace _3dpBurner
         private void btnZeroXY_Click(object sender, EventArgs e)
         {
             sendLine("G92X0Y0");
+            if (mnuSettingsStoreXY.Checked) tbCustom2.Text = String.Format("G92.1 G90 G0 X{0} Y{1}", lblMPosX, lblMPosY);
         }
         //Zero Z button
         private void btnZeroZ_Click(object sender, EventArgs e)
@@ -809,7 +831,7 @@ namespace _3dpBurner
         {
             {
                 if (e.KeyChar != (char)13) return;
-                sendLine("S"+tbLaserPwr.Text);
+                btnLaserPwr_Click(btnLaserPwr, null);
             }
         }
 
@@ -827,5 +849,29 @@ namespace _3dpBurner
 		{
 			System.Diagnostics.Process.Start(tbFile.Text);
 		}
+
+        private void tbStepSize_TextChanged(object sender, EventArgs e)
+        {
+            foreach (Control ctrl in gbJog.Controls)
+            {
+                if (ctrl.GetType() == button1.GetType()) (ctrl as RadioButton).Checked = false;
+            }
+        }
+
+        private void btnStepClick(object sender, EventArgs e)
+        {
+            tbStepSize.Text = (sender as RadioButton).Text;
+            (sender as RadioButton).Checked = true;
+        }
+
+        private void mnuSettingsStoreXY_Click(object sender, EventArgs e)
+        {
+            mnuSettingsStoreXY.Checked = !mnuSettingsStoreXY.Checked;
+        }
+
+        private void mnuSettingsStoreZ_Click(object sender, EventArgs e)
+        {
+            mnuSettingsStoreZ.Checked = !mnuSettingsStoreZ.Checked;
+        }
     }
 }

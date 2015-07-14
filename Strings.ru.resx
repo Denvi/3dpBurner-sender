@@ -127,7 +127,7 @@
     <value>Тревога</value>
   </data>
   <data name="applicationException" xml:space="preserve">
-    <value>Application exception</value>
+    <value>Необрабатываемое исключение в приложении</value>
   </data>
   <data name="groupBoxCaptionSpindle" xml:space="preserve">
     <value>Шпиндель</value>
@@ -167,7 +167,7 @@
     <value>Готов</value>
   </data>
   <data name="threadException" xml:space="preserve">
-    <value>Thread exception</value>
+    <value>Необрабатываемое исключение в потоке</value>
   </data>
   <data name="logFileSend" xml:space="preserve">
     <value>[Отправка файла...]
@@ -212,5 +212,11 @@
   <data name="msgBoxMessageFileDone" xml:space="preserve">
     <value>Задание выполнено!
 Прошло времени: {0}</value>
+  </data>
+  <data name="msgBoxCaptionFileError" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="msgBoxMessageFileError" xml:space="preserve">
+    <value>Ошибка при отправке файла</value>
   </data>
 </root>

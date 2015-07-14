@@ -37,7 +37,7 @@ namespace _3dpBurner
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);            
-//            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en-US"); 
+            //Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en-US"); 
             Application.Run(new frm3dpBurner());
         }
     }

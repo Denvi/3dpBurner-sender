@@ -1,35 +1,39 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<SettingsFile CurrentProfile="(Default)" GeneratedClassNamespace="_3dpBurner.Properties" GeneratedClassName="Settings1" xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="_3dpBurner.Properties" GeneratedClassName="Settings1">
+  <Profiles />
   <Settings>
-    <Setting Name="absolute" Type="System.Boolean" Scope="User" Roaming="false">
+    <Setting Name="absolute" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="baud" Type="System.String" Scope="User" Roaming="false">
+    <Setting Name="baud" Type="System.String" Scope="User">
       <Value Profile="(Default)">115200</Value>
     </Setting>
-    <Setting Name="custom1" Type="System.String" Scope="User" Roaming="false">
+    <Setting Name="custom1" Type="System.String" Scope="User">
       <Value Profile="(Default)">G0 X0 Y0</Value>
     </Setting>
-    <Setting Name="custom2" Type="System.String" Scope="User" Roaming="false">
+    <Setting Name="custom2" Type="System.String" Scope="User">
       <Value Profile="(Default)">G0 X10 Y10</Value>
     </Setting>
-    <Setting Name="file" Type="System.String" Scope="User" Roaming="false">
-      <Value Profile="(Default)" />
+    <Setting Name="mode" Type="System.String" Scope="User">
+      <Value Profile="(Default)">3-axis &amp;mill</Value>
     </Setting>
-    <Setting Name="mode" Type="System.String" Scope="User" Roaming="false">
-      <Value Profile="(Default)">2axisLasePWR_S</Value>
-    </Setting>
-    <Setting Name="port" Type="System.String" Scope="User" Roaming="false">
+    <Setting Name="port" Type="System.String" Scope="User">
       <Value Profile="(Default)">COM1</Value>
     </Setting>
-    <Setting Name="pwr" Type="System.String" Scope="User" Roaming="false">
+    <Setting Name="pwr" Type="System.String" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="step" Type="System.String" Scope="User" Roaming="false">
+    <Setting Name="step" Type="System.String" Scope="User">
       <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="storez" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="storexy" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="file" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>

@@ -9,338 +9,356 @@
 //------------------------------------------------------------------------------
 
 namespace _3dpBurner {
-	using System;
-	
-	
-	/// <summary>
-	///   Класс ресурса со строгой типизацией для поиска локализованных строк и т.д.
-	/// </summary>
-	// Этот класс создан автоматически классом StronglyTypedResourceBuilder
-	// с помощью такого средства, как ResGen или Visual Studio.
-	// Чтобы добавить или удалить член, измените файл .ResX и снова запустите ResGen
-	// с параметром /str или перестройте свой проект VS.
-	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
-	[global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-	[global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-	internal class Strings {
-		
-		private static global::System.Resources.ResourceManager resourceMan;
-		
-		private static global::System.Globalization.CultureInfo resourceCulture;
-		
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-		internal Strings() {
-		}
-		
-		/// <summary>
-		///   Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
-		/// </summary>
-		[global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-		internal static global::System.Resources.ResourceManager ResourceManager {
-			get {
-				if (object.ReferenceEquals(resourceMan, null)) {
-					global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("_3dpBurner.Strings", typeof(Strings).Assembly);
-					resourceMan = temp;
-				}
-				return resourceMan;
-			}
-		}
-		
-		/// <summary>
-		///   Перезаписывает свойство CurrentUICulture текущего потока для всех
-		///   обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
-		/// </summary>
-		[global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-		internal static global::System.Globalization.CultureInfo Culture {
-			get {
-				return resourceCulture;
-			}
-			set {
-				resourceCulture = value;
-			}
-		}
-		
-		/// <summary>
-		///   Ищет локализованную строку, похожую на Application exception.
-		/// </summary>
-		internal static string applicationException {
-			get {
-				return ResourceManager.GetString("applicationException", resourceCulture);
-			}
-		}
-		
-		/// <summary>
-		///   Ищет локализованную строку, похожую на Close.
-		/// </summary>
-		internal static string buttonTextPortClose {
-			get {
-				return ResourceManager.GetString("buttonTextPortClose", resourceCulture);
-			}
-		}
-		
-		/// <summary>
-		///   Ищет локализованную строку, похожую на Open.
-		/// </summary>
-		internal static string buttonTextPortOpen {
-			get {
-				return ResourceManager.GetString("buttonTextPortOpen", resourceCulture);
-			}
-		}
-		
-		/// <summary>
-		///   Ищет локализованную строку, похожую на PWR.
-		/// </summary>
-		internal static string buttonTextPower {
-			get {
-				return ResourceManager.GetString("buttonTextPower", resourceCulture);
-			}
-		}
-		
-		/// <summary>
-		///   Ищет локализованную строку, похожую на RPM.
-		/// </summary>
-		internal static string buttonTextSpeed {
-			get {
-				return ResourceManager.GetString("buttonTextSpeed", resourceCulture);
-			}
-		}
-		
-		/// <summary>
-		///   Ищет локализованную строку, похожую на Error reading line from serial port.
-		/// </summary>
-		internal static string errorSerialRead {
-			get {
-				return ResourceManager.GetString("errorSerialRead", resourceCulture);
-			}
-		}
-		
-		/// <summary>
-		///   Ищет локализованную строку, похожую на Laser.
-		/// </summary>
-		internal static string groupBoxCaptionLaser {
-			get {
-				return ResourceManager.GetString("groupBoxCaptionLaser", resourceCulture);
-			}
-		}
-		
-		/// <summary>
-		///   Ищет локализованную строку, похожую на Spindle
-		///.
-		/// </summary>
-		internal static string groupBoxCaptionSpindle {
-			get {
-				return ResourceManager.GetString("groupBoxCaptionSpindle", resourceCulture);
-			}
-		}
-		
-		/// <summary>
-		///   Ищет локализованную строку, похожую на {0}% ({1}/{2} lines).
-		/// </summary>
-		internal static string labelTextFileProgress {
-			get {
-				return ResourceManager.GetString("labelTextFileProgress", resourceCulture);
-			}
-		}
-		
-		/// <summary>
-		///   Ищет локализованную строку, похожую на [Error]: {0}. .
-		/// </summary>
-		internal static string logError {
-			get {
-				return ResourceManager.GetString("logError", resourceCulture);
-			}
-		}
-		
-		/// <summary>
-		///   Ищет локализованную строку, похожую на Error opening file.
-		/// </summary>
-		internal static string logErrorFileOpen {
-			get {
-				return ResourceManager.GetString("logErrorFileOpen", resourceCulture);
-			}
-		}
-		
-		/// <summary>
-		///   Ищет локализованную строку, похожую на Retrieving GRBL status.
-		/// </summary>
-		internal static string logErrorGRBLStatus {
-			get {
-				return ResourceManager.GetString("logErrorGRBLStatus", resourceCulture);
-			}
-		}
-		
-		/// <summary>
-		///   Ищет локализованную строку, похожую на Sending line.
-		/// </summary>
-		internal static string logErrorLineSend {
-			get {
-				return ResourceManager.GetString("logErrorLineSend", resourceCulture);
-			}
-		}
-		
-		/// <summary>
-		///   Ищет локализованную строку, похожую на Closing port.
-		/// </summary>
-		internal static string logErrorPortClose {
-			get {
-				return ResourceManager.GetString("logErrorPortClose", resourceCulture);
-			}
-		}
-		
-		/// <summary>
-		///   Ищет локализованную строку, похожую на Opening port.
-		/// </summary>
-		internal static string logErrorPortOpen {
-			get {
-				return ResourceManager.GetString("logErrorPortOpen", resourceCulture);
-			}
-		}
-		
-		/// <summary>
-		///   Ищет локализованную строку, похожую на No serial ports found.
-		/// </summary>
-		internal static string logErrorPortsNotFound {
-			get {
-				return ResourceManager.GetString("logErrorPortsNotFound", resourceCulture);
-			}
-		}
-		
-		/// <summary>
-		///   Ищет локализованную строку, похожую на Loading settings.
-		/// </summary>
-		internal static string logErrorSettingsLoad {
-			get {
-				return ResourceManager.GetString("logErrorSettingsLoad", resourceCulture);
-			}
-		}
-		
-		/// <summary>
-		///   Ищет локализованную строку, похожую на Saving settings.
-		/// </summary>
-		internal static string logErrorSettingsSave {
-			get {
-				return ResourceManager.GetString("logErrorSettingsSave", resourceCulture);
-			}
-		}
-		
-		/// <summary>
-		///   Ищет локализованную строку, похожую на [File done @{0}]
-		///.
-		/// </summary>
-		internal static string logFileDone {
-			get {
-				return ResourceManager.GetString("logFileDone", resourceCulture);
-			}
-		}
-		
-		/// <summary>
-		///   Ищет локализованную строку, похожую на [Sending file...]
-		///.
-		/// </summary>
-		internal static string logFileSend {
-			get {
-				return ResourceManager.GetString("logFileSend", resourceCulture);
-			}
-		}
-		
-		/// <summary>
-		///   Ищет локализованную строку, похожую на Done.
-		/// </summary>
-		internal static string msbBoxCaptionFileDone {
-			get {
-				return ResourceManager.GetString("msbBoxCaptionFileDone", resourceCulture);
-			}
-		}
-		
-		/// <summary>
-		///   Ищет локализованную строку, похожую на Restore Settings?.
-		/// </summary>
-		internal static string msbBoxMessageSettingsReset {
-			get {
-				return ResourceManager.GetString("msbBoxMessageSettingsReset", resourceCulture);
-			}
-		}
-		
-		/// <summary>
-		///   Ищет локализованную строку, похожую на Restore Settings.
-		/// </summary>
-		internal static string msgBoxCaptionSettingsReset {
-			get {
-				return ResourceManager.GetString("msgBoxCaptionSettingsReset", resourceCulture);
-			}
-		}
-		
-		/// <summary>
-		///   Ищет локализованную строку, похожую на Yeah!. Burning Done!
-		///Elapsed time: {0}.
-		/// </summary>
-		internal static string msgBoxMessageFileDone {
-			get {
-				return ResourceManager.GetString("msgBoxMessageFileDone", resourceCulture);
-			}
-		}
-		
-		/// <summary>
-		///   Ищет локализованную строку, похожую на Alarm.
-		/// </summary>
-		internal static string statusAlarm {
-			get {
-				return ResourceManager.GetString("statusAlarm", resourceCulture);
-			}
-		}
-		
-		/// <summary>
-		///   Ищет локализованную строку, похожую на Hold.
-		/// </summary>
-		internal static string statusHold {
-			get {
-				return ResourceManager.GetString("statusHold", resourceCulture);
-			}
-		}
-		
-		/// <summary>
-		///   Ищет локализованную строку, похожую на Home.
-		/// </summary>
-		internal static string statusHome {
-			get {
-				return ResourceManager.GetString("statusHome", resourceCulture);
-			}
-		}
-		
-		/// <summary>
-		///   Ищет локализованную строку, похожую на Idle.
-		/// </summary>
-		internal static string statusIdle {
-			get {
-				return ResourceManager.GetString("statusIdle", resourceCulture);
-			}
-		}
-		
-		/// <summary>
-		///   Ищет локализованную строку, похожую на Queue.
-		/// </summary>
-		internal static string statusQueue {
-			get {
-				return ResourceManager.GetString("statusQueue", resourceCulture);
-			}
-		}
-		
-		/// <summary>
-		///   Ищет локализованную строку, похожую на Run.
-		/// </summary>
-		internal static string statusRun {
-			get {
-				return ResourceManager.GetString("statusRun", resourceCulture);
-			}
-		}
-		
-		/// <summary>
-		///   Ищет локализованную строку, похожую на Thread exception.
-		/// </summary>
-		internal static string threadException {
-			get {
-				return ResourceManager.GetString("threadException", resourceCulture);
-			}
-		}
-	}
+    using System;
+    
+    
+    /// <summary>
+    ///   Класс ресурса со строгой типизацией для поиска локализованных строк и т.д.
+    /// </summary>
+    // Этот класс создан автоматически классом StronglyTypedResourceBuilder
+    // с помощью такого средства, как ResGen или Visual Studio.
+    // Чтобы добавить или удалить член, измените файл .ResX и снова запустите ResGen
+    // с параметром /str или перестройте свой проект VS.
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+    internal class Strings {
+        
+        private static global::System.Resources.ResourceManager resourceMan;
+        
+        private static global::System.Globalization.CultureInfo resourceCulture;
+        
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        internal Strings() {
+        }
+        
+        /// <summary>
+        ///   Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if (object.ReferenceEquals(resourceMan, null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("_3dpBurner.Strings", typeof(Strings).Assembly);
+                    resourceMan = temp;
+                }
+                return resourceMan;
+            }
+        }
+        
+        /// <summary>
+        ///   Перезаписывает свойство CurrentUICulture текущего потока для всех
+        ///   обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
+                return resourceCulture;
+            }
+            set {
+                resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Application exception.
+        /// </summary>
+        internal static string applicationException {
+            get {
+                return ResourceManager.GetString("applicationException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Close.
+        /// </summary>
+        internal static string buttonTextPortClose {
+            get {
+                return ResourceManager.GetString("buttonTextPortClose", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Open.
+        /// </summary>
+        internal static string buttonTextPortOpen {
+            get {
+                return ResourceManager.GetString("buttonTextPortOpen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на PWR.
+        /// </summary>
+        internal static string buttonTextPower {
+            get {
+                return ResourceManager.GetString("buttonTextPower", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на RPM.
+        /// </summary>
+        internal static string buttonTextSpeed {
+            get {
+                return ResourceManager.GetString("buttonTextSpeed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Error reading line from serial port.
+        /// </summary>
+        internal static string errorSerialRead {
+            get {
+                return ResourceManager.GetString("errorSerialRead", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Laser.
+        /// </summary>
+        internal static string groupBoxCaptionLaser {
+            get {
+                return ResourceManager.GetString("groupBoxCaptionLaser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Spindle
+        ///.
+        /// </summary>
+        internal static string groupBoxCaptionSpindle {
+            get {
+                return ResourceManager.GetString("groupBoxCaptionSpindle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на {0}% ({1}/{2} lines).
+        /// </summary>
+        internal static string labelTextFileProgress {
+            get {
+                return ResourceManager.GetString("labelTextFileProgress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на [Error]: {0}. .
+        /// </summary>
+        internal static string logError {
+            get {
+                return ResourceManager.GetString("logError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Error opening file.
+        /// </summary>
+        internal static string logErrorFileOpen {
+            get {
+                return ResourceManager.GetString("logErrorFileOpen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Retrieving GRBL status.
+        /// </summary>
+        internal static string logErrorGRBLStatus {
+            get {
+                return ResourceManager.GetString("logErrorGRBLStatus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Sending line.
+        /// </summary>
+        internal static string logErrorLineSend {
+            get {
+                return ResourceManager.GetString("logErrorLineSend", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Closing port.
+        /// </summary>
+        internal static string logErrorPortClose {
+            get {
+                return ResourceManager.GetString("logErrorPortClose", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Opening port.
+        /// </summary>
+        internal static string logErrorPortOpen {
+            get {
+                return ResourceManager.GetString("logErrorPortOpen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на No serial ports found.
+        /// </summary>
+        internal static string logErrorPortsNotFound {
+            get {
+                return ResourceManager.GetString("logErrorPortsNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Loading settings.
+        /// </summary>
+        internal static string logErrorSettingsLoad {
+            get {
+                return ResourceManager.GetString("logErrorSettingsLoad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Saving settings.
+        /// </summary>
+        internal static string logErrorSettingsSave {
+            get {
+                return ResourceManager.GetString("logErrorSettingsSave", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на [File done @{0}]
+        ///.
+        /// </summary>
+        internal static string logFileDone {
+            get {
+                return ResourceManager.GetString("logFileDone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на [Sending file...]
+        ///.
+        /// </summary>
+        internal static string logFileSend {
+            get {
+                return ResourceManager.GetString("logFileSend", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Done.
+        /// </summary>
+        internal static string msbBoxCaptionFileDone {
+            get {
+                return ResourceManager.GetString("msbBoxCaptionFileDone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Restore Settings?.
+        /// </summary>
+        internal static string msbBoxMessageSettingsReset {
+            get {
+                return ResourceManager.GetString("msbBoxMessageSettingsReset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Error.
+        /// </summary>
+        internal static string msgBoxCaptionFileError {
+            get {
+                return ResourceManager.GetString("msgBoxCaptionFileError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Restore Settings.
+        /// </summary>
+        internal static string msgBoxCaptionSettingsReset {
+            get {
+                return ResourceManager.GetString("msgBoxCaptionSettingsReset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Yeah!. Burning Done!
+        ///Elapsed time: {0}.
+        /// </summary>
+        internal static string msgBoxMessageFileDone {
+            get {
+                return ResourceManager.GetString("msgBoxMessageFileDone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Error sending file.
+        /// </summary>
+        internal static string msgBoxMessageFileError {
+            get {
+                return ResourceManager.GetString("msgBoxMessageFileError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Alarm.
+        /// </summary>
+        internal static string statusAlarm {
+            get {
+                return ResourceManager.GetString("statusAlarm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Hold.
+        /// </summary>
+        internal static string statusHold {
+            get {
+                return ResourceManager.GetString("statusHold", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Home.
+        /// </summary>
+        internal static string statusHome {
+            get {
+                return ResourceManager.GetString("statusHome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Idle.
+        /// </summary>
+        internal static string statusIdle {
+            get {
+                return ResourceManager.GetString("statusIdle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Queue.
+        /// </summary>
+        internal static string statusQueue {
+            get {
+                return ResourceManager.GetString("statusQueue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Run.
+        /// </summary>
+        internal static string statusRun {
+            get {
+                return ResourceManager.GetString("statusRun", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Thread exception.
+        /// </summary>
+        internal static string threadException {
+            get {
+                return ResourceManager.GetString("threadException", resourceCulture);
+            }
+        }
+    }
 }

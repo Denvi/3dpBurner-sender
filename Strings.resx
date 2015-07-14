@@ -214,4 +214,10 @@ Elapsed time: {0}</value>
   <data name="msgBoxCaptionSettingsReset" xml:space="preserve">
     <value>Restore Settings</value>
   </data>
+  <data name="msgBoxCaptionFileError" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="msgBoxMessageFileError" xml:space="preserve">
+    <value>Error sending file</value>
+  </data>
 </root>
