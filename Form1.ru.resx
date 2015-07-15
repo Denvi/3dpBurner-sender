@@ -179,9 +179,6 @@
   <data name="btnReset.Text" xml:space="preserve">
     <value>Сброс</value>
   </data>
-  <data name="gbJog.Text" xml:space="preserve">
-    <value>Перемещение</value>
-  </data>
   <data name="chkAbsolute.Text" xml:space="preserve">
     <value>G90 после перемещения</value>
   </data>
@@ -197,89 +194,11 @@
   <data name="label6.Text" xml:space="preserve">
     <value>Шаг:</value>
   </data>
-  <data name="groupBox2.Text" xml:space="preserve">
-    <value>Файл</value>
+  <data name="gbJog.Text" xml:space="preserve">
+    <value>Перемещение</value>
   </data>
   <data name="bEdit.Text" xml:space="preserve">
     <value>Правка</value>
-  </data>
-  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 24</value>
-  </data>
-  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 20</value>
-  </data>
-  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>Файл</value>
-  </data>
-  <data name="openToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 22</value>
-  </data>
-  <data name="openToolStripMenuItem.Text" xml:space="preserve">
-    <value>Открыть</value>
-  </data>
-  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 6</value>
-  </data>
-  <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 22</value>
-  </data>
-  <data name="exitToolStripMenuItem.Text" xml:space="preserve">
-    <value>Выход</value>
-  </data>
-  <data name="modeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 20</value>
-  </data>
-  <data name="modeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Режим</value>
-  </data>
-  <data name="axisMillToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>212, 22</value>
-  </data>
-  <data name="axisMillToolStripMenuItem.Text" xml:space="preserve">
-    <value>3-ех осевой фрезер</value>
-  </data>
-  <data name="axisLaserPWRSToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>212, 22</value>
-  </data>
-  <data name="axisLaserPWRSToolStripMenuItem.Text" xml:space="preserve">
-    <value>2-ух осевой лазер PWR-S</value>
-  </data>
-  <data name="axisLaserPWRZToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>212, 22</value>
-  </data>
-  <data name="axisLaserPWRZToolStripMenuItem.Text" xml:space="preserve">
-    <value>2-ух осевой лазер PWR-Z</value>
-  </data>
-  <data name="axisLaserToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>212, 22</value>
-  </data>
-  <data name="axisLaserToolStripMenuItem.Text" xml:space="preserve">
-    <value>3-ех осевой лазер</value>
-  </data>
-  <data name="settingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 20</value>
-  </data>
-  <data name="settingsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Настройки</value>
-  </data>
-  <data name="restoreSettingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>162, 22</value>
-  </data>
-  <data name="restoreSettingsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Сброс настроек</value>
-  </data>
-  <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 20</value>
-  </data>
-  <data name="helpToolStripMenuItem.Text" xml:space="preserve">
-    <value>Справка</value>
-  </data>
-  <data name="aboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 22</value>
-  </data>
-  <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
-    <value>О программе</value>
   </data>
   <data name="lblFileProgress.Size" type="System.Drawing.Size, System.Drawing">
     <value>68, 13</value>
@@ -302,11 +221,11 @@
   <data name="label8.Text" xml:space="preserve">
     <value>Прошло:</value>
   </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Файл</value>
+  </data>
   <data name="openFileDialog1.Filter" xml:space="preserve">
     <value>G-Code файлы (*.CNC; *.NC; *.TAP; *.TXT)|*.CNC;*.NC;*.TAP;*.TXT|Все файлы (*.*)|*.*</value>
-  </data>
-  <data name="gbConecction.Text" xml:space="preserve">
-    <value>Соединение</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 13</value>
@@ -323,20 +242,20 @@
   <data name="label4.Text" xml:space="preserve">
     <value>Порт:</value>
   </data>
-  <data name="gbLaserControl.Text" xml:space="preserve">
-    <value>Лазер</value>
+  <data name="gbConecction.Text" xml:space="preserve">
+    <value>Соединение</value>
   </data>
   <data name="btnLaserPwr.Text" xml:space="preserve">
     <value>Мощность</value>
   </data>
+  <data name="gbLaserControl.Text" xml:space="preserve">
+    <value>Лазер</value>
+  </data>
   <data name="tbCommand.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 20</value>
   </data>
-  <data name="gbConsole.Text" xml:space="preserve">
-    <value>Консоль</value>
-  </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 233</value>
+    <value>8, 234</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 13</value>
@@ -356,8 +275,8 @@
   <data name="btlClearLog.Text" xml:space="preserve">
     <value>Очистить</value>
   </data>
-  <data name="gbReference.Text" xml:space="preserve">
-    <value>Управление</value>
+  <data name="gbConsole.Text" xml:space="preserve">
+    <value>Консоль</value>
   </data>
   <data name="btnZeroZ.Text" xml:space="preserve">
     <value>Ноль
@@ -370,6 +289,9 @@ XY</value>
   <data name="btnZero.Text" xml:space="preserve">
     <value>Ноль
 XY</value>
+  </data>
+  <data name="gbReference.Text" xml:space="preserve">
+    <value>Управление</value>
   </data>
   <data name="toolStripStatusLabel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 20</value>
@@ -416,17 +338,14 @@ XY</value>
   <data name="lblMPosZ.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 20</value>
   </data>
-  <data name="mnuFile.Text" xml:space="preserve">
-    <value>&amp;Файл</value>
-  </data>
   <data name="mnuFileOpen.Text" xml:space="preserve">
     <value>&amp;Открыть</value>
   </data>
   <data name="mnuFileExit.Text" xml:space="preserve">
     <value>Вы&amp;ход</value>
   </data>
-  <data name="mnuMode.Text" xml:space="preserve">
-    <value>&amp;Режим</value>
+  <data name="mnuFile.Text" xml:space="preserve">
+    <value>&amp;Файл</value>
   </data>
   <data name="mnuModeMill.Text" xml:space="preserve">
     <value>3-ех осевой &amp;фрезер</value>
@@ -440,11 +359,11 @@ XY</value>
   <data name="mnuModeLaser.Text" xml:space="preserve">
     <value>3-ех осевой &amp;лазер</value>
   </data>
-  <data name="mnuSettings.Text" xml:space="preserve">
-    <value>&amp;Настройки</value>
+  <data name="mnuMode.Text" xml:space="preserve">
+    <value>&amp;Режим</value>
   </data>
   <data name="mnuSettingsStoreZ.Text" xml:space="preserve">
-    <value>Сохранять домашний &amp;Z в команде 1</value>
+    <value>Сохранять "домашний" &amp;Z в команде 1</value>
   </data>
   <data name="mnuSettingsStoreXY.Text" xml:space="preserve">
     <value>Сохранять ноль &amp;XY в команде 2</value>
@@ -452,11 +371,14 @@ XY</value>
   <data name="mnuSettingsRestore.Text" xml:space="preserve">
     <value>&amp;Сброс настроек</value>
   </data>
-  <data name="mnuHelp.Text" xml:space="preserve">
-    <value>&amp;Справка</value>
+  <data name="mnuSettings.Text" xml:space="preserve">
+    <value>&amp;Настройки</value>
   </data>
   <data name="mnuHelpAbout.Text" xml:space="preserve">
     <value>&amp;О программе</value>
+  </data>
+  <data name="mnuHelp.Text" xml:space="preserve">
+    <value>&amp;Справка</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

@@ -81,9 +81,29 @@ namespace _3dpBurner
 //        	this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 //			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;			
             InitializeComponent();
+
+            //align text boxes
+            alignControl(cbPort, bOpenPort);
+            alignControl(cbBaud, bOpenPort);
+            alignControl(tbFile, bOpenfile);
+            alignControl(pbFile, bStart);
+            alignControl(tbCommand, bSendCmd);
+            alignControl(tbCustom1, btnCustom1);
+            alignControl(tbCustom2, btnCustom2);
+
+            //adjust form height
+            this.ClientSize = new Size(this.ClientSize.Width, gbConsole.Bottom + statusStrip1.Height + gbConsole.Left);
+
+            //resize "Refresh port" button
+            bRefreshport.Width = bRefreshport.Height;
+
             System.Windows.Forms.Application.ThreadException += new System.Threading.ThreadExceptionEventHandler(Application_ThreadException);
             AppDomain currentDomain = AppDomain.CurrentDomain;
             currentDomain.UnhandledException += new UnhandledExceptionEventHandler(Application_UnhandledException);
+        }
+        private void alignControl(Control control, Control anchor)
+        {
+            control.Top = anchor.Top + anchor.Height / 2 - control.Height / 2;
         }
         //log serial port dataReceive thread error message
         public void logErrorThr(object sender, EventArgs e)
@@ -158,7 +178,7 @@ namespace _3dpBurner
             tbCustom2.Enabled = tbCommand.Enabled;
             btnCustom2.Enabled = tbCommand.Enabled;
             
-            restoreSettingsToolStripMenuItem.Enabled=!serialPort1.IsOpen;
+            mnuSettingsRestore.Enabled=!serialPort1.IsOpen;
         }
         //Update file progress (progressBars and labels)
         private void updateProgress()

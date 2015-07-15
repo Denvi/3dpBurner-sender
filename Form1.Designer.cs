@@ -89,20 +89,6 @@ namespace _3dpBurner
             this.button1 = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.bEdit = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.axisMillToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.axisLaserPWRSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.axisLaserPWRZToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.axisLaserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.restoreSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblRemaining = new System.Windows.Forms.Label();
             this.lblBuf = new System.Windows.Forms.Label();
             this.lblFileProgress = new System.Windows.Forms.Label();
@@ -161,7 +147,6 @@ namespace _3dpBurner
             this.mnuHelpAbout = new System.Windows.Forms.MenuItem();
             this.gbJog.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.gbConecction.SuspendLayout();
             this.gbLaserControl.SuspendLayout();
             this.gbConsole.SuspendLayout();
@@ -459,7 +444,6 @@ namespace _3dpBurner
             // 
             resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Controls.Add(this.bEdit);
-            this.groupBox2.Controls.Add(this.menuStrip1);
             this.groupBox2.Controls.Add(this.lblRemaining);
             this.groupBox2.Controls.Add(this.lblBuf);
             this.groupBox2.Controls.Add(this.lblFileProgress);
@@ -481,109 +465,6 @@ namespace _3dpBurner
             this.bEdit.Name = "bEdit";
             this.bEdit.UseVisualStyleBackColor = true;
             this.bEdit.Click += new System.EventHandler(this.BEditClick);
-            // 
-            // menuStrip1
-            // 
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
-            this.menuStrip1.BackColor = System.Drawing.Color.Gainsboro;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.modeToolStripMenuItem,
-            this.settingsToolStripMenuItem,
-            this.helpToolStripMenuItem});
-            this.menuStrip1.Name = "menuStrip1";
-            // 
-            // fileToolStripMenuItem
-            // 
-            resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.openToolStripMenuItem,
-            this.toolStripMenuItem1,
-            this.exitToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            // 
-            // openToolStripMenuItem
-            // 
-            resources.ApplyResources(this.openToolStripMenuItem, "openToolStripMenuItem");
-            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItemClick);
-            // 
-            // toolStripMenuItem1
-            // 
-            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            // 
-            // exitToolStripMenuItem
-            // 
-            resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItemClick);
-            // 
-            // modeToolStripMenuItem
-            // 
-            resources.ApplyResources(this.modeToolStripMenuItem, "modeToolStripMenuItem");
-            this.modeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.axisMillToolStripMenuItem,
-            this.axisLaserPWRSToolStripMenuItem,
-            this.axisLaserPWRZToolStripMenuItem,
-            this.axisLaserToolStripMenuItem});
-            this.modeToolStripMenuItem.Name = "modeToolStripMenuItem";
-            // 
-            // axisMillToolStripMenuItem
-            // 
-            resources.ApplyResources(this.axisMillToolStripMenuItem, "axisMillToolStripMenuItem");
-            this.axisMillToolStripMenuItem.CheckOnClick = true;
-            this.axisMillToolStripMenuItem.Name = "axisMillToolStripMenuItem";
-            this.axisMillToolStripMenuItem.Click += new System.EventHandler(this.axisMillToolStripMenuItem_Click);
-            // 
-            // axisLaserPWRSToolStripMenuItem
-            // 
-            resources.ApplyResources(this.axisLaserPWRSToolStripMenuItem, "axisLaserPWRSToolStripMenuItem");
-            this.axisLaserPWRSToolStripMenuItem.Checked = true;
-            this.axisLaserPWRSToolStripMenuItem.CheckOnClick = true;
-            this.axisLaserPWRSToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.axisLaserPWRSToolStripMenuItem.Name = "axisLaserPWRSToolStripMenuItem";
-            this.axisLaserPWRSToolStripMenuItem.Click += new System.EventHandler(this.axisLaserPWRSToolStripMenuItem_Click);
-            // 
-            // axisLaserPWRZToolStripMenuItem
-            // 
-            resources.ApplyResources(this.axisLaserPWRZToolStripMenuItem, "axisLaserPWRZToolStripMenuItem");
-            this.axisLaserPWRZToolStripMenuItem.CheckOnClick = true;
-            this.axisLaserPWRZToolStripMenuItem.Name = "axisLaserPWRZToolStripMenuItem";
-            this.axisLaserPWRZToolStripMenuItem.Click += new System.EventHandler(this.axisLaserPWRZToolStripMenuItem_Click);
-            // 
-            // axisLaserToolStripMenuItem
-            // 
-            resources.ApplyResources(this.axisLaserToolStripMenuItem, "axisLaserToolStripMenuItem");
-            this.axisLaserToolStripMenuItem.CheckOnClick = true;
-            this.axisLaserToolStripMenuItem.Name = "axisLaserToolStripMenuItem";
-            this.axisLaserToolStripMenuItem.Click += new System.EventHandler(this.axisLaserToolStripMenuItem_Click);
-            // 
-            // settingsToolStripMenuItem
-            // 
-            resources.ApplyResources(this.settingsToolStripMenuItem, "settingsToolStripMenuItem");
-            this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.restoreSettingsToolStripMenuItem});
-            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            // 
-            // restoreSettingsToolStripMenuItem
-            // 
-            resources.ApplyResources(this.restoreSettingsToolStripMenuItem, "restoreSettingsToolStripMenuItem");
-            this.restoreSettingsToolStripMenuItem.Name = "restoreSettingsToolStripMenuItem";
-            this.restoreSettingsToolStripMenuItem.Click += new System.EventHandler(this.restoreSettingsToolStripMenuItem_Click);
-            // 
-            // helpToolStripMenuItem
-            // 
-            resources.ApplyResources(this.helpToolStripMenuItem, "helpToolStripMenuItem");
-            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem});
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            // 
-            // aboutToolStripMenuItem
-            // 
-            resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // lblRemaining
             // 
@@ -1015,7 +896,6 @@ namespace _3dpBurner
             this.Controls.Add(this.gbJog);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Menu = this.mainMenu1;
             this.Name = "frm3dpBurner";
@@ -1025,8 +905,6 @@ namespace _3dpBurner
             this.gbJog.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.gbConecction.ResumeLayout(false);
             this.gbConecction.PerformLayout();
             this.gbLaserControl.ResumeLayout(false);
@@ -1041,8 +919,6 @@ namespace _3dpBurner
             this.PerformLayout();
 
         }
-        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.CheckBox chkAbsolute;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label6;
@@ -1100,20 +976,10 @@ namespace _3dpBurner
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RichTextBox rtbLog;
         private System.Windows.Forms.Label lblBuf;
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Button btnZdown;
         private System.Windows.Forms.Button btnZup;
         private System.Windows.Forms.Button btnZeroZ;
         private System.Windows.Forms.Button btnZeroXY;
-        private System.Windows.Forms.ToolStripMenuItem modeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem axisMillToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem axisLaserPWRSToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem axisLaserPWRZToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem axisLaserToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem restoreSettingsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
@@ -1133,8 +999,6 @@ namespace _3dpBurner
         private System.Windows.Forms.ToolStripStatusLabel lblMPosZ;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.Button bEdit;
         private System.Windows.Forms.MainMenu mainMenu1;
         private System.Windows.Forms.MenuItem mnuFile;
